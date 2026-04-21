@@ -1,0 +1,1401 @@
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[bf,small]{caption}
+
+\title{\textbf{合成高分子课堂笔记（一）}\\\large Synthesis of Polymers for a Better World \\\small Pan's Part: Week 1, 2, and 4 }
+\author{Zhiheng Yi}
+\date{2026.04.07}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{基本概念 (Basic Concepts)}
+
+\subsection{聚合物 (Polymer)}
+\begin{itemize}
+    \item \textbf{Definition}: A large molecule (macromolecule) composed of repeating structural units called \textbf{monomers}, connected by covalent bonds.  
+    \textbf{定义}：由称为“单体”的结构单元通过共价键重复连接而成的大分子。
+    \item \textbf{Key point}: The properties of a polymer depend on its molecular weight, structure, and the nature of monomers.
+    \item \textbf{提示}：聚合物不等于高分子量化合物（如油脂虽分子量大但不是聚合物，因无重复单元）。
+\end{itemize}
+
+\subsection{单体 (Monomer)}
+\begin{itemize}
+    \item \textbf{Definition}: Small molecule that can react chemically with other monomers to form a polymer.  
+    \textbf{定义}：能够与其他单体发生化学反应形成聚合物的小分子。
+    \item \textbf{Examples}: Ethylene (CH$_2$=CH$_2$), vinyl chloride (CH$_2$=CHCl), caprolactam (for nylon-6).
+\end{itemize}
+
+\subsection{分子量 (Molecular Weight, MW)}
+\begin{itemize}
+    \item \textbf{Definition}: Sum of atomic weights of all atoms in a polymer chain.  
+    \textbf{定义}：聚合物链中所有原子的原子量总和。
+    \item \textbf{Effect on properties}: As MW increases, tensile strength, toughness, and viscosity increase up to a limit (entanglement molecular weight). Very high MW makes processing difficult.
+    \item \textbf{要点}：分子量过低→材料脆；过高→熔体粘度过高。通常需控制在一定范围。
+\end{itemize}
+
+\subsection{分子量分布 (Molecular Weight Distribution, MWD)}
+Polymers are mixtures of chains with different lengths. 聚合物是不同链长分子的混合物。
+
+\begin{itemize}
+    \item \textbf{Number-average molecular weight} 数均分子量：  
+    $M_n = \frac{\sum N_i M_i}{\sum N_i}$  
+    Sensitive to small molecules (important for colligative properties).
+    
+    \item \textbf{Weight-average molecular weight} 重均分子量：  
+    $M_w = \frac{\sum N_i M_i^2}{\sum N_i M_i}$  
+    Sensitive to large molecules (important for mechanical properties).
+    
+    \item \textbf{Polydispersity index (PDI)} 多分散指数：  
+    $\text{PDI} = M_w / M_n$  
+    \begin{itemize}
+        \item PDI = 1: Monodisperse (e.g., proteins, some living polymerization products).
+        \item PDI $>$ 1: Typical for synthetic polymers.  
+        \item Step-growth: PDI $\approx$ 2 (most probable distribution).  
+        \item Chain-growth (free radical): PDI $\approx$ 1.5–2.  
+        \item Anionic living polymerization: PDI $\approx$ 1.01–1.1.
+    \end{itemize}
+    \item \textbf{重点}：PDI 影响加工性能和力学性能。宽分布（PDI大）流动性好但强度低；窄分布性能均匀。
+\end{itemize}
+
+\section{聚合物结构类型 (Polymer Architecture)}
+
+\subsection{均聚物 (Homopolymer)}
+Only one type of monomer repeating. Example: Polyethylene (PE, -CH$_2$-CH$_2$-)$_n$  
+仅有一种单体重复。例子：聚乙烯。
+
+\subsection{共聚物 (Copolymer)}
+Two or more different monomers. 两种或多种不同单体共聚。
+
+\begin{longtable}{p{4cm}p{5cm}p{5cm}}
+\toprule
+\textbf{类型 (Type)} & \textbf{结构 (Structure)} & \textbf{特点与例子 (Features \& Examples)} \\
+\midrule
+无规共聚物 (Random) & -A-B-A-A-B-B-A- & 单体无规排列，性能介于两种均聚物之间。  
+例：聚(乙烯-乙酸乙烯酯) EVA \\
+交替共聚物 (Alternating) & -A-B-A-B-A-B- & 严格交替，常由强相互作用单体对形成（如马来酸酐-苯乙烯 poly(styrene-co-maleic anhydride)）。  \\
+嵌段共聚物 (Block) & -A-A-A-B-B-B- & 长链段分别聚合，可发生微相分离，形成纳米结构（如热塑性弹性体）。  
+例：苯乙烯-丁二烯-苯乙烯 (Styrene-Butadiene-Styrene, SBS) \\
+三嵌段共聚物 (Tri-block) & -A-A-A-B-B-B-A-A-A- & 常见ABA型，如SBS，聚苯乙烯端嵌段提供物理交联。 \\
+梯度共聚物 (Gradient) & -A-B-A-B-B-A-B-B-B- & 组成沿链逐渐变化，性质连续过渡。  
+例：梯度共聚物可作相容剂 \\
+接枝共聚物 (Graft) & 主链为A，侧链为B & 主链-支链结构，冲击改性剂常用。  
+例：ABS树脂（丙烯腈-丁二烯-苯乙烯接枝共聚物） \\
+\bottomrule
+\end{longtable}
+
+\subsection{聚合物拓扑结构 (Topology)}
+\begin{itemize}
+    \item \textbf{Linear (线性)}: Simple chain. 易结晶，热塑性塑料。
+    \item \textbf{Branched (支化)}: Side chains attached to backbone. 降低结晶度，增加熔体强度（如LDPE）。
+    \item \textbf{Star (星形)}: Several chains from a central core. 低粘度，高官能度。
+    \item \textbf{Cross-linked (交联)}: Chains connected by covalent bonds (thermosets). 不熔不溶，高弹性（橡胶硫化）。
+    \item \textbf{Dendrimer (树枝状)}: Perfectly branched, monodisperse. 用于药物递送。
+\end{itemize}
+
+\section{区域化学与立体化学 (Regiochemistry \& Stereochemistry)}
+
+\subsection{区域规整性 (Regioregularity)}
+For asymmetric monomers (e.g., propylene CH$_2$=CH–CH$_3$):  
+对于不对称单体（如丙烯）：
+\begin{itemize}
+    \item \textbf{Head-to-tail}: Most common, regular structure, crystallizable.  
+    \textbf{头-尾连接}：最常见，规整结构，可结晶。
+    \item \textbf{Head-to-head / Tail-to-tail}: Defect, lowers crystallinity.  
+    \textbf{头-头或尾-尾连接}：缺陷，降低结晶度。
+    \item \textbf{提示}：区域规整度影响聚合物能否结晶。Ziegler-Natta催化剂可实现高区域规整性。
+\end{itemize}
+
+\subsection{立构规整性 (Tacticity)}
+Orientation of substituents along the chain: 侧基沿主链的空间排列：
+\begin{itemize}
+    \item \textbf{Isotactic (全同)}: All substituents on same side. 可结晶，高熔点（如全同聚丙烯）。
+    \item \textbf{Syndiotactic (间同)}: Alternating sides. 可结晶，熔点略低于全同。
+    \item \textbf{Atactic (无规)}: Random orientation, amorphous. 无定形，橡胶状或粘稠液体。
+    \item 立构规整度由催化剂控制。茂金属催化剂可精确控制全同/间同。
+\end{itemize}
+
+\subsection{几何异构 (Geometric Isomerism)}
+In diene polymers (e.g., polybutadiene): 在二烯烃聚合物中（如聚丁二烯）：
+\begin{itemize}
+    \item \textbf{Cis (顺式)}: Two H atoms on same side – flexible, rubbery (low $T_g$).  
+    \textbf{顺式}：同侧，柔顺，橡胶态（低$T_g$）。
+    \item \textbf{Trans (反式)}: Opposite sides – more rigid, crystalline.  
+    \textbf{反式}：异侧，刚性，可结晶（如古塔胶）。
+    \item \textbf{考试提示}：顺式-1,4-聚丁二烯是合成橡胶；反式-1,4-聚丁二烯是塑料。
+\end{itemize}
+
+\section{聚合机理 (Polymerization Mechanisms)}
+
+\subsection{逐步聚合 (Step-Growth Polymerization)}
+\begin{itemize}
+    \item \textbf{Characteristics}: Monomers react via functional groups (often condensation), producing small molecule byproducts (e.g., water, alcohol).  
+    \textbf{特点}：单体通过官能团反应（如缩合），生成小分子副产物（如水、醇）。
+    \item \textbf{Molecular weight growth}: Slow, increases gradually with reaction time. High conversion needed for high MW.  
+    \textbf{分子量增长}：缓慢，随反应时间延长逐渐增加。需高转化率才能获得高分子量。
+    \item \textbf{Examples}: Polyesters (diacid + diol), Polyamides (nylon), Polyurethanes.  
+    \textbf{例子}：聚酯（二元酸+二醇）、聚酰胺（尼龙）、聚氨酯。
+    \item \textbf{关键公式 (Carothers equation)}:  
+    数均聚合度 $X_n = \frac{1}{1-p}$，其中 $p$ 为反应程度 (extent of reaction)。  
+    若单体非等当量，则 $X_n = \frac{1+r}{1+r-2rp}$，$r = N_A/N_B \le 1$。
+    \item \textbf{PDI}: $M_w/M_n = 1+p \approx 2$ at high conversion.
+\end{itemize}
+
+\subsection{链增长聚合 (Chain-Growth Polymerization)}
+\begin{itemize}
+    \item \textbf{Characteristics}: Monomers add rapidly to an active center (radical, anionic, cationic). No small molecule byproducts.  
+    \textbf{特点}：单体通过活性中心（自由基、阴离子、阳离子）快速加成，无小分子副产物。
+    \item \textbf{Molecular weight growth}: High MW achieved early, conversion increases later.  
+    \textbf{分子量增长}：早期即达到高分子量，后期主要提高产率。
+    \item \textbf{Examples}: Polyethylene, Polystyrene, PVC, PMMA.  
+    \textbf{例子}：聚乙烯、聚苯乙烯、聚氯乙烯、聚甲基丙烯酸甲酯。
+    \item \textbf{Steps}: Initiation → Propagation → Termination (or chain transfer).  
+    \textbf{步骤}：引发 → 增长 → 终止（或链转移）。
+    \item \textbf{Kinetics}: $R_p = k_p [M][M^\bullet]$, degree of polymerization $DP = \frac{R_p}{R_i}$ (for radical termination by combination/disproportionation).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{逐步聚合 vs 链增长聚合 (Step vs Chain)}
+\begin{tabular}{p{5cm}p{5cm}}
+\toprule
+\textbf{逐步聚合} & \textbf{链增长聚合} \\
+\midrule
+单体消失快 (monomers consumed early) & 单体消失慢 (monomers persist) \\
+分子量随转化率缓慢增加 (MW increases with conversion) & 分子量早期即高 (MW high from start) \\
+需要高纯度单体 (high purity needed) & 对杂质敏感 (sensitive to impurities) \\
+常有副产物 (byproducts) & 无副产物 (no byproducts) \\
+例子：尼龙、聚酯 (nylon, polyester) & 例子：聚苯乙烯、PMMA (PS, PMMA) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{活性聚合 (Living Polymerization)}
+\begin{itemize}
+    \item No termination or chain transfer. 无终止无转移。
+    \item MW increases linearly with conversion. PDI $\to$ 1.
+    \item Examples: Anionic polymerization, some controlled radical (ATRP, RAFT).
+    \item \textbf{重点}：用于合成嵌段共聚物、窄分布聚合物。
+\end{itemize}
+
+\section{热性能 (Thermal Properties)}
+
+\subsection{玻璃化转变温度 ($T_g$)}
+\textbf{$T_g$ (Glass transition temperature)}: Temperature at which amorphous polymer changes from glassy (hard, brittle) to rubbery (soft, flexible).  
+\textbf{玻璃化转变温度}：非晶聚合物从玻璃态（硬脆）转变为橡胶态（柔软）的温度。
+
+\begin{itemize}
+    \item \textbf{Factors affecting $T_g$}:
+    \begin{itemize}
+        \item Chain flexibility: Flexible chains (e.g., -Si-O-, -C-O-) have low $T_g$; rigid chains (aromatic) have high $T_g$.
+        \item Side groups: Bulky side groups hinder rotation → increase $T_g$. Long flexible side groups act as internal plasticizers → decrease $T_g$.
+        \item Plasticizers: Small molecules increase free volume → lower $T_g$.
+        \item Crosslinking: Reduces chain mobility → increases $T_g$.
+        \item Molecular weight: $T_g$ increases with MW up to a limit (about $M_n$ = 10,000–20,000).
+    \end{itemize}
+    \item \textbf{考试常见}：聚二甲基硅氧烷 (PDMS) $T_g$ = -123°C (橡胶)；聚苯乙烯 $T_g$ = 100°C (塑料)。
+\end{itemize}
+
+\subsection{熔融温度 ($T_m$)}
+\textbf{$T_m$ (Melting temperature)}: Temperature at which crystalline regions melt into a liquid. Only semi-crystalline polymers have a clear $T_m$.  
+\textbf{熔融温度}：聚合物结晶区域熔化为液体的温度。仅半结晶聚合物有明显 $T_m$。
+
+\begin{itemize}
+    \item $T_m$ depends on crystal thickness (thicker lamellae → higher $T_m$).
+    \item Relationship: $T_m \approx (1.5 - 2.5) T_g$ for many polymers (in Kelvin).
+    \item \textbf{考试提示}：$T_g$ 和 $T_m$ 是聚合物热性能的两个关键温度。使用温度上限：塑料低于 $T_g$ 或 $T_m$；橡胶高于 $T_g$ 但低于分解温度。
+\end{itemize}
+
+\subsection{半结晶聚合物 (Semi-crystalline Polymer)}
+\begin{itemize}
+    \item Consists of \textbf{crystalline lamellae} (ordered regions) and \textbf{amorphous region} (disordered).  
+    由 \textbf{结晶片晶} 和 \textbf{无定形区} 组成。
+    \item \textbf{Tie molecules}: Chains connecting lamellae and amorphous region, provide toughness.  
+    \textbf{系带分子}：连接晶片和无定形区的分子链，提供韧性。
+    \item \textbf{Degree of crystallinity}: Affects density, stiffness, transparency. Higher crystallinity → higher $T_m$, higher modulus, lower impact strength.
+    \item Examples: Polyethylene (PE), Polypropylene (PP), Nylon, PET.
+    \item \textbf{重点}：半结晶聚合物有 $T_g$ 和 $T_m$；无定形聚合物只有 $T_g$。
+\end{itemize}
+
+\section{力学性能 (Mechanical Properties)}
+
+\subsection{应力与应变 (Stress \& Strain)}
+\begin{itemize}
+    \item Stress $\sigma = F/A$ (N/m$^2$ or Pa)  
+      应变 $\varepsilon = \Delta L / L_0$ (dimensionless)
+    \item Young's modulus $E = \sigma / \varepsilon$ (measure of stiffness, 刚度)
+    \item \textbf{Types of deformation}: Elastic (reversible) and Plastic (permanent).
+\end{itemize}
+
+\subsection{典型应力-应变曲线 (Stress-Strain Curves)}
+\begin{itemize}
+    \item \textbf{Brittle polymer} (脆性): Low elongation, high modulus, fracture before yielding (e.g., PS).
+    \item \textbf{Ductile polymer} (延性): Yield point, necking, cold drawing (e.g., PE, Nylon).
+    \item \textbf{Elastomer} (弹性体): Very high elongation, low modulus, no yield (e.g., rubber).
+\end{itemize}
+
+\subsection{聚合物力学状态分类}
+\begin{itemize}
+    \item \textbf{Fibers (纤维)}: High modulus, high orientation, e.g., nylon, polyester.
+    \item \textbf{Plastics (塑料)}: Moderate modulus, processable.
+    \item \textbf{Rubbers (橡胶)}: Low modulus, high elasticity, $T_g$ below room temperature.
+\end{itemize}
+
+\subsection{韧性 (Toughness) 与强度 (Strength)}
+\begin{itemize}
+    \item \textbf{Toughness}: Area under stress-strain curve (ability to absorb energy).
+    \item \textbf{Strength}: Maximum stress before failure.
+    \item \textbf{考试提示}：增加分子量提高强度；增加交联提高模量但降低韧性；增塑剂降低强度但增加韧性。
+\end{itemize}
+
+\section{热塑性塑料 vs. 热固性塑料 (Thermoplastics vs. Thermosets)}
+
+\begin{longtable}{p{5cm}p{5cm}}
+\toprule
+\textbf{热塑性塑料 (Thermoplastics)} & \textbf{热固性塑料 (Thermosets)} \\
+\midrule
+线性或支化结构 (Linear or branched) & 三维交联网络 (3D crosslinked network) \\
+可反复加热软化、冷却硬化 (Reversible) & 一旦固化，不能再熔化 (Irreversible) \\
+可回收 (Recyclable) & 不可回收 (Non-recyclable) \\
+通常较软、韧性较好 (Softer, tougher) & 硬、脆、强度高 (Hard, brittle, high strength) \\
+例子：PE, PP, PS, PVC, PET & 例子：环氧树脂 (epoxy)、酚醛树脂 (phenolic)、不饱和聚酯 (unsaturated polyester) \\
+\bottomrule
+\end{longtable}
+
+\section{生物可降解塑料 (Biodegradable Plastics)}
+\textbf{Definition}: Plastics that can be decomposed by microorganisms into CO$_2$, water, and biomass under appropriate conditions.  
+\textbf{定义}：在适当条件下能被微生物分解为CO$_2$、水和生物质的塑料。
+
+\begin{itemize}
+    \item \textbf{Examples}:
+    \begin{itemize}
+        \item PLA (Polylactic acid, 聚乳酸): From corn starch; compostable; used in 3D printing.
+        \item PHA (Polyhydroxyalkanoates, 聚羟基脂肪酸酯): Produced by bacteria; fully biodegradable.
+        \item PBAT (Polybutylene adipate terephthalate, 聚己二酸-对苯二甲酸丁二醇酯): Biodegradable aliphatic-aromatic copolyester.
+        \item Starch blends: Cheap but water-sensitive.
+    \end{itemize}
+    \item \textbf{Challenges}: Higher cost, need for industrial composting facilities, slower degradation in marine environment.
+    \item \textbf{考试提示}：区分“生物基”(bio-based)和“生物可降解”(biodegradable)。PLA是生物基但不一定在自然环境中快速降解。
+\end{itemize}
+
+\section{重要补充：从原油到塑料 (From Crude Oil to Plastics)}
+\begin{center}
+\begin{tabular}{l}
+原油 (Crude oil) $\rightarrow$ 石脑油 (Naphtha) $\rightarrow$ 裂解 (Cracking) $\rightarrow$ 乙烯 $\rightarrow$ 聚乙烯 \\
+天然气 (Natural gas) $\rightarrow$ 乙烷 (Ethane) $\rightarrow$ 裂解 $\rightarrow$ 乙烯 $\rightarrow$ 聚乙烯 (Polyethylene) \\
+\end{tabular}
+\end{center}
+\textbf{补充}：其他基础烯烃（丙烯、丁二烯）也来自裂解。芳烃（苯、甲苯、二甲苯）来自重整 (reforming)，用于聚苯乙烯、聚酯等。
+
+\section{常见聚合物 (Common Polymers)}
+
+\begin{longtable}{p{2.5cm}p{6cm}p{5cm}}
+\toprule
+\textbf{缩写} & \textbf{全称} & \textbf{主要用途} \\
+\midrule
+PE & Polyethylene (聚乙烯) & 塑料袋、瓶子、管道 \\
+PP & Polypropylene (聚丙烯) & 汽车部件、食品容器 \\
+PS & Polystyrene (聚苯乙烯) & 一次性杯子、泡沫包装 \\
+PVC & Polyvinyl chloride (聚氯乙烯) & 管材、电缆绝缘层 \\
+PET & Polyethylene terephthalate (聚对苯二甲酸乙二醇酯) & 饮料瓶、纤维 \\
+PMMA & Polymethyl methacrylate (聚甲基丙烯酸甲酯) & 有机玻璃（Plexiglas） \\
+PA (Nylon) & Polyamide (聚酰胺) & 纤维、工程塑料 \\
+PC & Polycarbonate (聚碳酸酯) & 光学透镜、CD \\
+PU & Polyurethane (聚氨酯) & 泡沫、涂料、弹性体 \\
+PTFE & Polytetrafluoroethylene (聚四氟乙烯) & 不粘涂层（Teflon） \\
+\bottomrule
+\end{longtable}
+
+\section{Week 1 考试重点总结 (Exam Highlights)}
+\begin{itemize}
+    \item \textbf{计算题可能}: 
+    \begin{itemize}
+        \item 数均、重均分子量及PDI计算。
+        \item 逐步聚合的Carothers方程：已知$p$求$X_n$，或已知$X_n$求$p$。
+        \item 共聚物组成方程（如有涉及）。
+    \end{itemize}
+    \item \textbf{简答题常见}:
+    \begin{itemize}
+        \item 比较逐步聚合与链增长聚合。
+        \item 解释$T_g$和$T_m$，并列出影响$T_g$的因素。
+        \item 说明热塑性塑料与热固性塑料的区别。
+        \item 解释立构规整性及其对结晶的影响。
+        \item 共聚物类型及其结构特征。
+    \end{itemize}
+    \item \textbf{概念辨析}:
+    \begin{itemize}
+        \item 均聚物 vs 共聚物；无规 vs 交替 vs 嵌段。
+        \item 全同 vs 间同 vs 无规。
+        \item 顺式 vs 反式。
+        \item 数均 vs 重均分子量。
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\section{Week 1 关键术语速查表 (Quick Glossary)}
+
+\begin{longtable}{p{5cm}p{5cm}}
+\toprule
+\textbf{英文} & \textbf{中文} \\
+\midrule
+Monomer & 单体 \\
+Polymer & 聚合物 \\
+Homopolymer & 均聚物 \\
+Copolymer & 共聚物 \\
+Random copolymer & 无规共聚物 \\
+Alternating copolymer & 交替共聚物 \\
+Block copolymer & 嵌段共聚物 \\
+Graft copolymer & 接枝共聚物 \\
+Gradient copolymer & 梯度共聚物 \\
+Molecular weight distribution & 分子量分布 \\
+Number-average molecular weight ($M_n$) & 数均分子量 \\
+Weight-average molecular weight ($M_w$) & 重均分子量 \\
+Polydispersity index (PDI) & 多分散指数 \\
+Glass transition temperature ($T_g$) & 玻璃化转变温度 \\
+Melting temperature ($T_m$) & 熔融温度 \\
+Thermoplastic & 热塑性塑料 \\
+Thermoset & 热固性塑料 \\
+Step-growth polymerization & 逐步聚合 \\
+Chain-growth polymerization & 链增长聚合 \\
+Condensation polymerization & 缩聚 \\
+Addition polymerization & 加聚 \\
+Living polymerization & 活性聚合 \\
+Regioregularity & 区域规整性 \\
+Tacticity & 立构规整度 \\
+Isotactic & 全同立构 \\
+Syndiotactic & 间同立构 \\
+Atactic & 无规立构 \\
+Cis/trans isomerism & 顺反异构 \\
+Semi-crystalline & 半结晶 \\
+Amorphous & 无定形 \\
+Tie molecule & 系带分子 \\
+Crosslinking & 交联 \\
+Degree of polymerization ($X_n$) & 聚合度 \\
+Extent of reaction ($p$) & 反应程度 \\
+Carothers equation & Carothers方程 \\
+Young's modulus & 杨氏模量 \\
+Toughness & 韧性 \\
+Biodegradable plastic & 生物可降解塑料 \\
+PLA & 聚乳酸 \\
+PHA & 聚羟基脂肪酸酯 \\
+\bottomrule
+\end{longtable}
+
+
+
+\newpage
+\section{聚合物结构的多层次性 (Hierarchical Structure of Polymers)}
+
+聚合物的性能由不同层次的结构共同决定，从化学组成到链构型再到聚集态。
+
+\subsection{原子水平：重复单元的化学结构 (Atomic Level: Chemical Structure of Repeating Unit)}
+\begin{itemize}
+    \item \textbf{Polyethylene (PE)} 聚乙烯: $-$CH$_2$-CH$_2$$-$, 主链全为单键，柔性好 (flexible)，易成型 (mold into shapes)，可结晶 (crystalline)。
+    \item \textbf{Kevlar} 凯夫拉: 主链含苯环 (aromatic ring, -Ph-)，刚性键 (rigid bond)，形成液晶 (liquid crystal)，可纺丝成纤维 (spun into fibers)，高强度。
+    \item \textbf{考试要点}：主链刚性（芳环、双键）提高$T_g$和$T_m$，增加强度；柔性链（-O-、-Si-O-）降低$T_g$，增加弹性。
+\end{itemize}
+
+\subsection{分子水平：链的构型 (Molecular Level: Chain Architecture)}
+\begin{itemize}
+    \item \textbf{Linear (线性)}: 无支链，分子紧密堆积，易结晶。例：高密度聚乙烯 (HDPE, high-density PE)。
+    \item \textbf{Branched (支化)}: 有侧链，降低堆积密度，结晶度低。例：低密度聚乙烯 (LDPE, low-density PE)。
+    \item \textbf{Network (网络)}: 共价交联 (cross-linking)。
+    \begin{itemize}
+        \item 低交联密度 (low crosslink density): 橡胶 (rubber) – 弹性可逆拉伸。
+        \item 高交联密度 (high crosslink density): 热固性塑料 (thermoset) – 刚硬不熔。例：环氧树脂 (epoxy)。
+    \end{itemize}
+    \item \textbf{提示}：支化增加熔体强度但降低结晶度；交联使聚合物不溶不熔。
+\end{itemize}
+
+\subsection{二级结构：螺旋构象 (Secondary Structure: Helical Coil)}
+\begin{itemize}
+    \item 常见于天然聚合物 (natural polymers)，如蛋白质的$\alpha$-螺旋、DNA双螺旋。
+    \item 合成聚合物中，某些立构规整聚合物（如全同聚丙烯）也采取螺旋构象以利于结晶。
+    \item \textbf{提示}：螺旋构象是主链内旋转受限的结果，常与手性和规整性相关。
+\end{itemize}
+
+\subsection{链长 (Chain Length)}
+\begin{itemize}
+    \item \textbf{Degree of Polymerization (DP)} 聚合度: 聚合物链中重复单元的数量。$DP = M_n / M_0$，其中$M_0$为重复单元分子量。
+    \item \textbf{短链 vs 长链 (Short vs Long chains)}:
+    \begin{itemize}
+        \item 长链: 更高的$T_m$，更高的熔体粘度 (melt viscosity)，更高的强度。
+        \item 短链: 低$T_m$，低粘度，易流动。
+    \end{itemize}
+    \item \textbf{要点}：分子量（链长）是决定聚合物性能的最重要参数之一。
+\end{itemize}
+
+\section{共聚物类型 (Copolymer Types)}
+
+当两种或更多单体共聚时，根据单体在链上的排列方式分为以下几类：
+
+\begin{longtable}{p{4cm}p{5cm}p{5cm}}
+\toprule
+\textbf{类型 (Type)} & \textbf{结构示意 (Structure)} & \textbf{特点与例子} \\
+\midrule
+统计共聚物 (Statistical) & BABAABAAABAAA... & 单体无规排列，符合统计规律。与无规共聚物常混用。 \\
+交替共聚物 (Alternating) & ABABABABAB... & 严格交替，如马来酸酐-苯乙烯共聚物。 \\
+嵌段共聚物 (Block) & AAAAA...BBBBBB... & 长链段分别聚合。例：SBS (苯乙烯-丁二烯-苯乙烯)。 \\
+接枝共聚物 (Graft) & 主链A，侧链B & 例：ABS树脂（丙烯腈-丁二烯-苯乙烯接枝共聚物）。 \\
+\bottomrule
+\end{longtable}
+
+\textbf{注意}：“统计共聚物”是更广义的术语，包括无规、交替、梯度等。
+
+\section{结晶性与无定形 (Crystallinity and Amorphous State)}
+
+\subsection{结晶性 (Crystalline)}
+\begin{itemize}
+    \item 聚合物链规则排列形成有序区域 (crystalline domain)，称为片晶 (lamellae)。
+    \item 具有明确的熔融温度 ($T_m$)，熔融时发生一级相变。
+    \item 结晶度影响密度、刚度、透明度。
+\end{itemize}
+
+\subsection{无定形 (Amorphous)}
+\begin{itemize}
+    \item 链无规则排列，无长程有序。
+    \item 表现出玻璃化转变温度 ($T_g$)，没有明显的$T_m$。
+    \item 无定形聚合物在$T_g$以上变为橡胶态。
+\end{itemize}
+
+\subsection{半结晶聚合物 (Semi-crystalline)}
+同时含有结晶区和无定形区。例：PE, PP, PA, PET。
+
+\subsection{提示}：热塑性塑料可以是半结晶或无定形；热固性塑料通常是无定形且交联的。
+
+\section{热塑性塑料、热固性塑料与弹性体 (Thermoplastics, Thermosets, Elastomers)}
+
+\begin{longtable}{p{4cm}p{4cm}p{4cm}p{4cm}}
+\toprule
+ & \textbf{热塑性塑料 (Thermoplastic)} & \textbf{热固性塑料 (Thermoset)} & \textbf{弹性体 (Elastomer)} \\
+\midrule
+结构 & 线性或支化 & 高度交联网络 & 轻度交联 \\
+加热行为 & 软化流动，可逆 & 不熔，分解 & 不熔，可能降解 \\
+典型性能 & 韧性，可回收 & 刚硬，耐热 & 高弹性，可拉伸 \\
+例子 & PE, PP, PS, PVC & 环氧树脂，酚醛树脂 & 天然橡胶，硅橡胶 \\
+\bottomrule
+\end{longtable}
+
+\textbf{关键区别}：热塑性塑料可反复加工；热固性塑料一旦固化不可逆；弹性体在低应力下可大幅可逆变形。
+
+\section{立构规整性 (Tacticity)}
+
+对于乙烯基聚合物 $-$[CH$_2$-CHR]$-$，侧基R的空间排列方式：
+
+\begin{itemize}
+    \item \textbf{Isotactic (等规)}: 所有侧基R位于主链平面的同一侧。可结晶，高熔点。
+    \item \textbf{Syndiotactic (间规)}: 侧基交替位于两侧。也可结晶，熔点略低于等规。
+    \item \textbf{Atactic (无规)}: 侧基随机分布。无定形，通常为橡胶态或粘稠液体。
+\end{itemize}
+
+
+\textbf{要点}：立构规整度由催化剂控制。Ziegler-Natta催化剂可得等规聚丙烯；茂金属催化剂可得间规聚丙烯。
+
+\section{链长与分子量 (Chain Length and Molecular Weight)}
+
+\subsection{聚合度 (Degree of Polymerization, DP)}
+\[
+DP = \frac{M_n}{M_0}
+\]
+其中$M_n$为数均分子量，$M_0$为重复单元分子量。
+
+\subsection{多分散性 (Polydispersity)}
+\begin{itemize}
+    \item \textbf{Polydisperse (多分散)}: 聚合物链长分布在一个较宽的范围。绝大多数合成聚合物都是多分散的。
+    \item \textbf{Monodisperse (单分散)}: 所有链长相同。仅存在于某些天然聚合物（如蛋白质）或特殊合成方法（如活性聚合）。
+\end{itemize}
+
+\subsection{平均分子量的不同定义}
+由于聚合物是多分散的，需要用统计平均来描述分子量。
+
+\begin{itemize}
+    \item \textbf{Number-Averaged Molecular Weight ($M_n$)} 数均分子量:
+    \[
+    M_n = \frac{\sum N_i M_i}{\sum N_i}
+    \]
+    对低分子量组分敏感，用于计算聚合度、依数性。
+    
+    \item \textbf{Weight-Averaged Molecular Weight ($M_w$)} 重均分子量:
+    \[
+    M_w = \frac{\sum N_i M_i^2}{\sum N_i M_i}
+    \]
+    对高分子量组分敏感，影响流变性能和力学性能。
+    
+    \item \textbf{Z-Averaged Molecular Weight ($M_z$)}:
+    \[
+    M_z = \frac{\sum N_i M_i^3}{\sum N_i M_i^2}
+    \]
+    更强调极高分子量组分，用于沉降平衡分析。
+    
+    \item \textbf{Viscosity-Averaged Molecular Weight ($M_v$)}:
+    \[
+    M_v = \left( \frac{\sum N_i M_i^{1+a}}{\sum N_i M_i} \right)^{1/a}
+    \]
+    由粘度法测得，其中$a$为Mark-Houwink参数（通常0.5–0.8）。
+\end{itemize}
+
+\subsection{多分散指数 (Polydispersity Index, PDI)}
+\[
+\text{PDI} = \frac{M_w}{M_n}
+\]
+PDI $\ge$ 1。PDI=1为单分散；PDI越大，分布越宽。
+
+\begin{itemize}
+    \item 逐步聚合: PDI = 2 (最可几分布)
+    \item 自由基聚合: PDI = 1.5–2.0
+    \item 活性聚合: PDI = 1.01–1.1
+\end{itemize}
+
+\textbf{常见计算}：已知一组分子量和摩尔数（或质量），求$M_n$, $M_w$, PDI。
+
+\section{聚合机理复习 (Polymerization Mechanisms Recap)}
+
+\subsection{逐步聚合 (Step-Growth)}
+\begin{itemize}
+    \item 官能团反应，有小分子副产物。
+    \item 分子量随转化率缓慢增加。
+    \item 聚合度 $X_n = \frac{1}{1-p}$ (Carothers方程)。
+\end{itemize}
+
+\subsection{链增长聚合 (Chain-Growth)}
+\begin{itemize}
+    \item 活性中心（自由基、阴离子、阳离子）引发，无副产物。
+    \item 早期即得高分子量。
+    \item 步骤：引发(Initiation) → 增长(Propagation) → 终止(Termination) / 链转移(Chain transfer)。
+\end{itemize}
+
+\textbf{提示}：比较两种机理时，可从单体消耗速率、分子量-转化率关系、副产物、对杂质敏感性等方面回答。
+
+\section{相行为 (Phase Behavior)}
+\begin{itemize}
+    \item \textbf{Intermix (互溶)}: 两种聚合物或聚合物与溶剂混合形成均相。
+    \item \textbf{Phase separate (相分离)}: 不相容聚合物共混时形成两相。例如聚苯乙烯(PS)和聚丁二烯(PB)共混物会发生相分离。
+    \item \textbf{考试要点}：嵌段共聚物可发生微相分离 (microphase separation)，形成有序纳米结构（如球状、柱状、层状），是热塑性弹性体的基础。
+\end{itemize}
+
+\section{聚苯乙烯示例 (Polystyrene, PSt)}
+\begin{itemize}
+    \item 化学式: $-$[CH$_2$-CH(C$_6$H$_5$)]$_n$-，侧基为苯环。
+    \item 无规聚苯乙烯 (aPS): 无定形，透明，$T_g$≈100°C。
+    \item 等规聚苯乙烯 (iPS): 可结晶，熔点约240°C。
+    \item 用途：一次性餐具、包装、绝缘材料。
+\end{itemize}
+
+\section{Week 2 考试重点总结 (Exam Highlights)}
+\begin{itemize}
+    \item \textbf{计算题可能}: 
+    \begin{itemize}
+        \item 给定分子量分布数据，计算$M_n$, $M_w$, PDI。
+        \item 由$M_n$和重复单元分子量计算DP。
+        \item 逐步聚合中$X_n$与$p$的关系。
+    \end{itemize}
+    \item \textbf{简答题常见}:
+    \begin{itemize}
+        \item 解释线性、支化、交联结构对聚合物性能的影响。
+        \item 比较热塑性塑料、热固性塑料和弹性体。
+        \item 说明等规、间规、无规立构聚合物的区别及其对结晶性的影响。
+        \item 统计共聚物、交替共聚物、嵌段共聚物的结构差异。
+        \item 为什么合成聚合物通常是多分散的？如何获得窄分布聚合物？
+    \end{itemize}
+    \item \textbf{概念辨析}:
+    \begin{itemize}
+        \item $M_n$ vs $M_w$ vs $M_z$。
+        \item 结晶 vs 无定形；$T_g$ vs $T_m$。
+        \item 逐步聚合 vs 链增长聚合。
+    \end{itemize}
+\end{itemize}、
+\section{Week 2 关键术语速查表 (Quick Glossary)}
+
+\begin{longtable}{p{5cm}p{5cm}}
+\toprule
+\textbf{英文} & \textbf{中文} \\
+\midrule
+Degree of Polymerization (DP) & 聚合度 \\
+Number-averaged molecular weight ($M_n$) & 数均分子量 \\
+Weight-averaged molecular weight ($M_w$) & 重均分子量 \\
+Z-averaged molecular weight ($M_z$) & Z均分子量 \\
+Viscosity-averaged molecular weight ($M_v$) & 粘均分子量 \\
+Polydispersity Index (PDI) & 多分散指数 \\
+Monodisperse & 单分散 \\
+Polydisperse & 多分散 \\
+Linear polymer & 线型聚合物 \\
+Branched polymer & 支化聚合物 \\
+Cross-linked network & 交联网络 \\
+Thermoplastic & 热塑性塑料 \\
+Thermoset & 热固性塑料 \\
+Elastomer & 弹性体 \\
+Crystalline & 结晶性 \\
+Amorphous & 无定形 \\
+Semi-crystalline & 半结晶 \\
+Isotactic & 等规立构 \\
+Syndiotactic & 间规立构 \\
+Atactic & 无规立构 \\
+Statistical copolymer & 统计共聚物 \\
+Alternating copolymer & 交替共聚物 \\
+Block copolymer & 嵌段共聚物 \\
+Graft copolymer & 接枝共聚物 \\
+Phase separation & 相分离 \\
+Microphase separation & 微相分离 \\
+Helical coil & 螺旋形结构 \\
+Kevlar & 凯夫拉 \\
+Polyethylene (PE) & 聚乙烯 \\
+High-density PE (HDPE) & 高密度聚乙烯 \\
+Low-density PE (LDPE) & 低密度聚乙烯 \\
+Polystyrene (PSt) & 聚苯乙烯 \\
+Epoxy & 环氧树脂 \\
+\bottomrule
+\end{longtable}
+
+\newpage
+
+\section{链增长聚合 vs 逐步聚合回顾 (Chain-growth vs Step-growth Recap)}
+
+\begin{longtable}{p{6.5cm}p{6.5cm}}
+\toprule
+\textbf{链增长聚合 (Chain-growth Polymerization)} & \textbf{逐步聚合 (Step-growth Polymerization)} \\
+\midrule
+Active center (radical, anion, cation) initiates reaction & Direct reaction between functional groups \\
+活性中心（自由基、阴离子、阳离子）引发 & 官能团之间直接反应 \\
+Monomers add rapidly to the active center & Monomers, oligomers, and polymers all can react \\
+单体快速加成到活性中心 & 单体、低聚物、聚合物均可反应 \\
+No small molecule byproducts & Often produce small molecules (water, alcohol, etc.) \\
+无小分子副产物 & 常有小分子副产物（水、醇等） \\
+High molecular weight achieved early; MW changes little with conversion & MW increases slowly with conversion; high conversion needed for high MW \\
+早期即得高分子量，转化率提高时分子量变化不大 & 分子量随转化率缓慢增加，需高转化率得高分子量 \\
+Monomer concentration decreases gradually & Monomers consumed rapidly at early stage \\
+单体浓度逐渐降低 & 单体在早期迅速消耗 \\
+Examples: PE, PS, PVC & Examples: Nylon, Polyester, Polyurethane \\
+例子：聚乙烯、聚苯乙烯、PVC & 例子：尼龙、聚酯、聚氨酯 \\
+\bottomrule
+\end{longtable}
+
+\section{自由基聚合 (Free Radical Polymerization, FRP)}
+
+\subsection{概述 (Overview)}
+Free radical polymerization is the most important industrial chain-growth method, suitable for vinyl monomers. The active center is a free radical (R•).  
+自由基聚合是工业上最重要的链增长聚合方法，适用于乙烯基单体。活性中心为自由基 (free radical, R•)。
+
+\subsection{乙烯基单体类型 (Vinyl Monomer Types)}
+
+\begin{longtable}{p{4cm}p{5cm}p{5cm}}
+\toprule
+\textbf{Monomer Type} & \textbf{Substituent R} & \textbf{Polymer Example} \\
+\textbf{单体类型} & \textbf{取代基 R} & \textbf{聚合物例子} \\
+\midrule
+Single substitution (单取代) & -H & Polyethylene (PE) 聚乙烯 \\
+& -Ph (phenyl) & Polystyrene (PS) 聚苯乙烯 \\
+& -Cl & Poly(vinyl chloride) (PVC) 聚氯乙烯 \\
+& -OOCCH$_3$ (acetoxy) & Poly(vinyl acetate) (PVAc) 聚乙酸乙烯酯 \\
+& -COOH & Poly(acrylic acid) (PAA) 聚丙烯酸 \\
+& -CN (cyano) & Polyacrylonitrile (PAN) 聚丙烯腈 \\
+Double substitution on same C (同碳双取代) & -Cl, -Cl & Poly(vinylidene chloride) (PVDC) 聚偏二氯乙烯 \\
+& -F, -F & Poly(vinylidene fluoride) (PVDF) 聚偏二氟乙烯 \\
+& -CH$_3$, -COOCH$_3$ & Poly(methyl methacrylate) (PMMA) 聚甲基丙烯酸甲酯 \\
+\bottomrule
+\end{longtable}
+
+\textbf{Exam tip}: Double-substituted monomers usually cannot undergo free radical polymerization due to steric hindrance, but PMMA is an exception due to the cooperative effect of methyl and ester groups.  
+\textbf{考试提示}：双取代单体通常因空间位阻难以自由基聚合，但PMMA是例外，因为甲基和酯基的协同作用。
+
+\subsection{自由基聚合机理 (Mechanism of FRP)}
+
+Free radical polymerization consists of three steps: Initiation, Propagation, Termination. Sometimes chain transfer also occurs.  
+自由基聚合分为三步：引发 (Initiation)、增长 (Propagation)、终止 (Termination)。有时还涉及链转移 (Chain Transfer)。
+
+\subsubsection{引发 (Initiation)}
+
+Initiation involves two stages: (1) decomposition of initiator to form primary radicals; (2) addition of primary radical to a monomer to form a chain radical.  
+引发包含两个阶段：(1) 引发剂分解产生初级自由基；(2) 初级自由基与单体加成形成链自由基。
+
+\textbf{(1) 引发剂分解 (Decomposition of Initiator)}
+\[
+I \xrightarrow{k_d} 2R^\bullet
+\]
+Common initiators (常用引发剂):
+\begin{itemize}
+    \item \textbf{Benzoyl peroxide (BPO, 过氧苯甲酰)}: Ph-CO-O-O-OC-Ph $\rightarrow$ 2 Ph-CO-O• $\rightarrow$ 2 Ph• + 2 CO$_2$. Decomposition temperature: 60-80°C.  
+    分解温度约60-80°C。
+    \item \textbf{AIBN (Azobisisobutyronitrile, 偶氮二异丁腈)}: (CH$_3$)$_2$C(CN)-N=N-C(CN)(CH$_3$)$_2$ $\rightarrow$ 2 (CH$_3$)$_2$C•(CN) + N$_2$↑. Decomposition temperature: 50-70°C. Produces N$_2$ gas.  
+    分解温度约50-70°C，产生氮气。
+    \item \textbf{Redox initiators (氧化还原引发体系)}: e.g., persulfate + bisulfite. Can initiate at low temperature (0-50°C), used in emulsion polymerization.  
+    如过硫酸盐+亚硫酸氢盐，可在低温（0-50°C）下引发，用于乳液聚合。
+\end{itemize}
+
+\textbf{Initiator efficiency (引发效率, f)}: The fraction of primary radicals that successfully initiate polymerization. f is typically 0.3-0.8. Some radicals are lost due to cage effect or side reactions.  
+初级自由基中真正能与单体反应引发聚合的分数。f通常在0.3-0.8之间，部分自由基因笼蔽效应 (cage effect) 或副反应而失活。
+
+\textbf{Rate of initiation (引发速率)}:
+\[
+R_i = 2 f k_d [I]
+\]
+where $k_d$ is the decomposition rate constant (typically $10^{-4}$ to $10^{-6}$ s$^{-1}$).  
+其中 $k_d$ 为分解速率常数（通常为 $10^{-4}$ 到 $10^{-6}$ s$^{-1}$）。
+
+\textbf{(2) 初级自由基与单体加成 (Addition to monomer)}
+\[
+R^\bullet + M \xrightarrow{k_i} RM^\bullet
+\]
+This step is usually very fast and not rate-determining.  
+该步骤通常很快，不是决速步。
+
+\subsubsection{增长 (Propagation)}
+The chain radical adds monomer repeatedly, growing the chain.  
+链自由基反复加成单体，使链增长。
+\[
+RM_n^\bullet + M \xrightarrow{k_p} RM_{n+1}^\bullet
+\]
+The rate constant $k_p$ is typically $10^2$ to $10^4$ L mol$^{-1}$ s$^{-1}$.  
+速率常数 $k_p$ 通常为 $10^2$ 到 $10^4$ L mol$^{-1}$ s$^{-1}$。
+
+Important: All propagation steps have approximately the same rate constant (independent of chain length).  
+重要：所有增长步骤的速率常数近似相同（与链长无关）。
+
+\textbf{Common monomers with electron-withdrawing groups (常见吸电子基团单体)}:
+\begin{itemize}
+    \item -COOR (acrylate, 丙烯酸酯)
+    \item -COOR with $\alpha$-CH$_3$ (methacrylate, 甲基丙烯酸酯)
+    \item -CN (acrylonitrile, 丙烯腈)
+\end{itemize}
+
+\subsubsection{终止 (Termination)}
+Termination occurs when two chain radicals react. Two modes:  
+当两个链自由基反应时发生终止。两种方式：
+
+\begin{longtable}{p{4cm}p{6cm}p{4cm}}
+\toprule
+\textbf{Mode (方式)} & \textbf{Reaction (反应)} & \textbf{Effect on MW (对分子量的影响)} \\
+\midrule
+Coupling / Combination (偶合终止) & RM$_n^\bullet$ + RM$_m^\bullet$ $\rightarrow$ RM$_{n+m}$R & MW doubles (分子量相加) \\
+Disproportionation (歧化终止) & RM$_n^\bullet$ + RM$_m^\bullet$ $\rightarrow$ RM$_n$ + RM$_m$ & MW unchanged (分子量不变) \\
+\bottomrule
+\end{longtable}
+
+\textbf{Rate of termination (终止速率)}:
+\[
+R_{tc} = 2 k_{tc} [M^\bullet]^2 \quad \text{(coupling)}
+\]
+\[
+R_{td} = 2 k_{td} [M^\bullet]^2 \quad \text{(disproportionation)}
+\]
+\[
+R_t = 2 k_t [M^\bullet]^2, \quad \text{where } k_t = k_{tc} + k_{td}
+\]
+$k_t$ is typically $10^6$ to $10^8$ L mol$^{-1}$ s$^{-1}$.  
+$k_t$ 通常为 $10^6$ 到 $10^8$ L mol$^{-1}$ s$^{-1}$。
+
+\subsection{自由基聚合总动力学 (Overall Kinetics of FRP)}
+
+The overall rate of polymerization (rate of monomer consumption) is:  
+聚合总速率（单体消耗速率）为：
+\[
+R_p = -\frac{d[M]}{dt} = k_p [M] [M^\bullet]
+\]
+
+\subsubsection{稳态假设 (Steady-State Assumption)}
+Assuming that the concentration of radicals $[M^\bullet]$ remains constant during most of the polymerization: $R_i = R_t$.  
+假设在聚合的大部分时间内自由基浓度 $[M^\bullet]$ 保持恒定：$R_i = R_t$。
+
+Substitute:  
+代入：
+\[
+2 f k_d [I] = 2 k_t [M^\bullet]^2
+\]
+\[
+[M^\bullet] = \left( \frac{f k_d [I]}{k_t} \right)^{1/2}
+\]
+
+Then the overall rate:  
+则总速率为：
+\[
+R_p = k_p \left( \frac{f k_d}{k_t} \right)^{1/2} [M] [I]^{1/2}
+\]
+
+\textbf{Key conclusions (关键结论)}:
+\begin{itemize}
+    \item $R_p \propto [I]^{1/2}$: Rate increases with initiator concentration. 速率随引发剂浓度增加而增加。
+    \item $R_p \propto [M]$: Rate is first-order in monomer. 速率对单体为一级。
+    \item Degree of polymerization $X_n \propto [M]/[I]^{1/2}$. 聚合度与单体浓度成正比，与引发剂浓度平方根成反比。
+\end{itemize}
+
+\subsection{自动加速现象 (Auto-acceleration / Trommsdorff Effect)}
+
+\textbf{Description (描述)}: As conversion increases, viscosity rises, making it harder for chain radicals to diffuse and terminate. However, monomer molecules (small) can still diffuse to the active center. This leads to an increase in $[M^\bullet]$ and thus $R_p$ increases dramatically.  
+随着转化率升高，体系粘度增大，链自由基扩散终止变得困难。但单体小分子仍能扩散到活性中心，导致 $[M^\bullet]$ 升高，$R_p$ 急剧增加。
+
+\textbf{Consequences (后果)}:
+\begin{itemize}
+    \item Heat release accelerates (放热加剧), may cause runaway reaction.
+    \item Molecular weight increases (分子量增大).
+    \item Can lead to crosslinking or gelation (可能导致交联或凝胶化).
+\end{itemize}
+
+\subsection{链转移 (Chain Transfer)}
+
+Chain transfer occurs when a chain radical abstracts an atom (usually H) from another molecule, creating a new radical that can continue polymerization.  
+链转移是指链自由基从其他分子上夺取一个原子（通常是H），产生一个新的自由基继续聚合。
+
+\[
+RM_n^\bullet + XY \longrightarrow RM_nX + Y^\bullet
+\]
+
+\textbf{Types of chain transfer (链转移类型, side reaction)}:
+
+\begin{longtable}{p{7cm}p{7cm}}
+\toprule
+\textbf{Type (类型)} & \textbf{Effect (影响)} \\
+\midrule
+Transfer to monomer (向单体转移) & Always present; lowers MW (总是存在，降低分子量) \\
+Transfer to initiator (向引发剂转移) & Significant at high [I]; consumes initiator, lowers rate (引发剂浓度高时显著；消耗引发剂，降低速率) \\
+Transfer to solvent (向溶剂转移) & Significant in solution polymerization; used to control MW (溶液聚合中显著；用于调节分子量) \\
+Transfer to polymer (向聚合物转移) & Creates branches or crosslinks (长链支化或交联) \\
+Transfer to added chain transfer agent (向外加链转移剂转移) & Most common industrial MW control (e.g., thiols) (工业上最常用的分子量调节手段，如硫醇) \\
+\bottomrule
+\end{longtable}
+
+\subsection{自由基聚合热力学 (Thermodynamics of FRP)}
+
+The Gibbs free energy of polymerization:  
+聚合反应的吉布斯自由能：
+\[
+\Delta G_p = \Delta H_p - T \Delta S_p
+\]
+For most vinyl monomers, $\Delta G_p < 0$ at normal temperatures, so polymerization is spontaneous.  
+对于大多数乙烯基单体，在常温下 $\Delta G_p < 0$，聚合反应自发。
+
+Typical values:
+\begin{itemize}
+    \item $-\Delta H_p = 30$–$150$ kJ/mol (exothermic, 放热)
+    \item $-\Delta S_p = 100$–$130$ J/mol/K (entropy decreases, 熵减)
+\end{itemize}
+
+\textbf{Ceiling temperature ($T_c$)}: Temperature above which $\Delta G_p > 0$ and polymerization does not occur.  
+\textbf{上限温度}：高于该温度时 $\Delta G_p > 0$，聚合不能发生。
+\[
+T_c = \frac{\Delta H_p}{\Delta S_p}
+\]
+
+\subsection{自由基聚合实施方法 (Polymerization Processes)}
+
+\begin{longtable}{p{3.5cm}p{4cm}p{4cm}p{4cm}}
+\toprule
+\textbf{Method (方法)} & \textbf{Components (组分)} & \textbf{Particle size (粒径)} & \textbf{Examples (例子)} \\
+\midrule
+Bulk (本体聚合) & Monomer + initiator (no solvent) & Whole reactor (整体) & PMMA sheet, PS \\
+Solution (溶液聚合) & Monomer + initiator + inert solvent & – & Acrylics \\
+Suspension (悬浮聚合) & Monomer (oil) + oil-soluble initiator + water + suspending agent & 0.1–5 mm droplets & PVC, PS beads, PMMA beads \\
+Emulsion (乳液聚合) & Monomer + water-soluble initiator + water + emulsifier & 50 nm – 5 $\mu$m particles & Styrene-butadiene rubber, PVAc \\
+\bottomrule
+\end{longtable}
+
+\textbf{Key features of emulsion polymerization (乳液聚合特点)}:
+\begin{itemize}
+    \item Water-soluble initiator (e.g., K$_2$S$_2$O$_8$) 水溶性引发剂
+    \item Emulsifier (surfactant) forms micelles 乳化剂形成胶束
+    \item Polymerization occurs inside micelles, producing very high MW 聚合在胶束内发生，产生超高分子量
+    \item Excellent heat dissipation 散热优良
+\end{itemize}
+
+\subsection{自由基聚合关键特征总结 (Key Features of FRP Summary)}
+\begin{itemize}
+    \item High molecular weight achieved immediately after initiation.  
+    引发后立即获得高分子量。
+    \item Monomer concentration decreases gradually, but MW does not change much with conversion.  
+    单体浓度逐渐降低，但分子量随转化率变化不大。
+    \item Increasing temperature increases $R_p$ (higher $k_p$, $k_d$).  
+    升高温度提高聚合速率。
+    \item Reaction time increases yield, not MW.  
+    反应时间提高产率，而非分子量。
+\end{itemize}
+
+\section{离子聚合 (Ionic Polymerization)}
+
+Ionic polymerization is a chain-growth mechanism where the active center is an ion (cation or anion).  
+离子聚合是链增长聚合的一种，活性中心为离子（阳离子或阴离子）。
+
+\subsection{阳离子聚合 (Cationic Polymerization)}
+\textbf{Active center}: Carbocation (碳正离子).  
+\textbf{Initiators}: Lewis acids (e.g., BF$_3$, AlCl$_3$) + co-initiator (e.g., H$_2$O).  
+\textbf{Monomers}: Electron-rich (e.g., isobutylene, vinyl ethers).  
+\textbf{Example}: Polyisobutylene (butyl rubber).  
+
+\subsection{阴离子聚合 (Anionic Polymerization)}
+\textbf{Active center}: Carbanion (碳负离子).  
+\textbf{Initiators}: Strong bases (e.g., butyllithium, NaNH$_2$).  
+\textbf{Monomers}: Electron-deficient (e.g., styrene, butadiene, acrylates).  
+\textbf{Features}: Living polymerization – no termination, narrow PDI, block copolymers possible.  
+\textbf{Example}: Styrene-butadiene-styrene (SBS) triblock copolymer.
+
+\subsection{比较：自由基 vs 离子聚合 (Comparison: Radical vs Ionic)}
+\begin{itemize}
+    \item Radical: Insensitive to polar impurities, but sensitive to oxygen.  
+      自由基：对极性杂质不敏感，但对氧敏感。
+    \item Ionic: Very sensitive to water, oxygen, and polar impurities; requires dry, inert conditions.  
+      离子聚合：对水、氧和极性杂质非常敏感，需干燥惰性条件。
+\end{itemize}
+
+\section{重要工业聚合物 (Important Industrial Polymers)}
+
+\subsection{聚碳酸酯 (Polycarbonate, PC)}
+Structure: Contains carbonate group $-$O-(C=O)-O$-$ and bisphenol A (BPA) unit.  
+结构：含碳酸酯基团和双酚A单元。
+\[
+\text{BPA} + \text{Phosgene (COCl}_2\text{)} \rightarrow \text{PC}
+\]
+Properties: Transparent, tough, high $T_g$ (~150°C). Used in optical discs, safety glasses.  
+性能：透明、坚韧、高$T_g$。用于光盘、安全眼镜。
+
+\subsection{聚氨酯 (Polyurethane, PU)}
+Formed by addition reaction between diisocyanate and diol (no small molecule byproduct).  
+由二异氰酸酯与二醇通过加成反应生成（无小分子副产物）。
+\[
+\text{OCN-R-NCO} + \text{HO-R'-OH} \rightarrow \text{Polyurethane}
+\]
+Isocyanate group ($-$N=C=O$) reacts with hydroxyl group ($-$OH$)$.  
+异氰酸酯基与羟基反应。
+
+Properties: Can be flexible foam (low crosslinking) or rigid plastic (high crosslinking).  
+性能：可制成软质泡沫（低交联）或硬质塑料（高交联）。
+
+\section{离子聚合 (Ionic Polymerization)}
+
+\subsection{概述 (Overview)}
+
+Ionic polymerization is a chain-growth polymerization where the active center is an ion (cation or anion) rather than a free radical.  
+离子聚合是链增长聚合的一种，其活性中心为离子（阳离子或阴离子），而非自由基。
+
+\textbf{Key characteristics (关键特征)}:
+\begin{itemize}
+    \item Very sensitive to water, oxygen, and polar impurities; requires strict anhydrous and inert conditions.  
+      对水、氧和极性杂质非常敏感，需严格无水无氧条件。
+    \item Often proceeds at low temperatures (e.g., -78°C to 0°C) to suppress side reactions.  
+      通常在低温（如 -78°C 至 0°C）下进行以抑制副反应。
+    \item Can exhibit \textbf{living polymerization} behavior (no termination or chain transfer).  
+      可呈现\textbf{活性聚合}行为（无终止、无转移）。
+    \item Allows synthesis of well-defined block copolymers and narrow molecular weight distribution (PDI $\approx$ 1.01–1.1).  
+      可合成结构明确的嵌段共聚物和窄分子量分布（PDI $\approx$ 1.01–1.1）。
+\end{itemize}
+
+\subsection{阳离子聚合 (Cationic Polymerization)}
+
+\subsubsection{活性中心 (Active Center)}
+The active center is a carbocation (carbonium ion) at the chain end.  
+活性中心为链端的碳正离子。
+
+\subsubsection{引发剂 (Initiators)}
+Cationic polymerization requires electrophilic initiators (Lewis acids) combined with a co-initiator (protogen) that provides a proton or carbocation.  
+阳离子聚合需要亲电引发剂（路易斯酸）和提供质子或碳正离子的共引发剂。
+
+Common initiator systems (常见引发体系):
+\begin{itemize}
+    \item Lewis acids: BF$_3$, AlCl$_3$, TiCl$_4$, SnCl$_4$, etc.  
+      路易斯酸：BF$_3$、AlCl$_3$、TiCl$_4$、SnCl$_4$ 等。
+    \item Co-initiators: H$_2$O, HCl, ROH, RCOOH, RX (alkyl halides).  
+      共引发剂：H$_2$O、HCl、ROH、RCOOH、RX（卤代烷）。
+    \item Example: BF$_3$ + H$_2$O $\rightarrow$ H$^+$[BF$_3$OH]$^-$ – the proton initiates polymerization.  
+      例如：BF$_3$ + H$_2$O $\rightarrow$ H$^+$[BF$_3$OH]$^-$，质子引发聚合。
+\end{itemize}
+
+\subsubsection{单体 (Monomers)}
+Monomers must be electron-rich (nucleophilic) to stabilize the carbocation.  
+单体必须富含电子（亲核性）以稳定碳正离子。
+
+Suitable monomers (适用单体):
+\begin{itemize}
+    \item Alkenes with electron-donating substituents: isobutylene (CH$_2$=C(CH$_3$)$_2$), vinyl ethers (CH$_2$=CHOR).  
+      带有给电子取代基的烯烃：异丁烯、乙烯基醚。
+    \item Styrene derivatives (p-methoxystyrene).  
+      苯乙烯衍生物（对甲氧基苯乙烯）。
+    \item Cyclic ethers (e.g., tetrahydrofuran, via ring-opening cationic polymerization).  
+      环醚（如四氢呋喃，通过开环阳离子聚合）。
+\end{itemize}
+
+\subsubsection{机理 (Mechanism)}
+\begin{enumerate}
+    \item \textbf{Initiation}: Formation of carbocation by proton addition to monomer or by hydride abstraction.  
+      \textbf{引发}：通过质子加成或负氢夺取形成碳正离子。
+    \item \textbf{Propagation}: Carbocation adds monomer repeatedly; the growing chain end is a carbocation paired with a counteranion (e.g., BF$_3$OH$^-$).  
+      \textbf{增长}：碳正离子反复加成单体；增长链端为碳正离子-抗衡阴离子对。
+    \item \textbf{Termination}: Occurs by proton elimination (giving an unsaturated end) or chain transfer.  
+      \textbf{终止}：通过质子消除（生成不饱和端基）或链转移发生。
+\end{enumerate}
+
+\subsubsection{典型例子 (Typical Example)}
+\textbf{Polyisobutylene (PIB)}: Produced by cationic polymerization of isobutylene using BF$_3$ + H$_2$O at –100°C to –50°C. Used in butyl rubber (copolymer with isoprene), adhesives, and inner tubes.  
+\textbf{聚异丁烯}：异丁烯在 –100°C 至 –50°C 下用 BF$_3$ + H$_2$O 引发阳离子聚合。用于丁基橡胶（与异戊二烯共聚）、粘合剂和内胎。
+
+\subsection{阴离子聚合 (Anionic Polymerization)}
+
+\subsubsection{活性中心 (Active Center)}
+The active center is a carbanion at the chain end.  
+活性中心为链端的碳负离子。
+
+\subsubsection{引发剂 (Initiators)}
+Strong nucleophilic initiators are used.  
+使用强亲核引发剂。
+
+Common initiators (常见引发剂):
+\begin{itemize}
+    \item Alkali metal alkyls: butyllithium (n-BuLi, sec-BuLi, tert-BuLi).  
+      烷基碱金属：丁基锂（n-BuLi, sec-BuLi, tert-BuLi）。
+    \item Alkali metal amides: NaNH$_2$.  
+      碱金属氨基化物：NaNH$_2$。
+    \item Electron transfer initiators: alkali metals (Na, K) + aromatic compounds (naphthalene) → radical anions.  
+      电子转移引发剂：碱金属（Na、K）+ 芳香化合物（萘）→ 自由基阴离子。
+\end{itemize}
+
+\subsubsection{单体 (Monomers)}
+Monomers must be electron-deficient (electrophilic) to stabilize the carbanion.  
+单体必须缺电子（亲电性）以稳定碳负离子。
+
+Suitable monomers (适用单体):
+\begin{itemize}
+    \item Vinyl monomers with electron-withdrawing groups: styrene, butadiene, isoprene, acrylates, acrylonitrile, methacrylates.  
+      带有吸电子基团的乙烯基单体：苯乙烯、丁二烯、异戊二烯、丙烯酸酯、丙烯腈、甲基丙烯酸酯。
+    \item Cyclic monomers (ring-opening anionic polymerization): ethylene oxide, caprolactone.  
+      环状单体（开环阴离子聚合）：环氧乙烷、己内酯。
+\end{itemize}
+
+\subsubsection{机理 (Mechanism)}
+\begin{enumerate}
+    \item \textbf{Initiation}: Nucleophilic addition of initiator to monomer forms a carbanion.  
+      \textbf{引发}：引发剂亲核加成到单体上形成碳负离子。
+    \item \textbf{Propagation}: Carbanion adds monomer repeatedly; the growing chain end is a carbanion paired with a countercation (e.g., Li$^+$).  
+      \textbf{增长}：碳负离子反复加成单体；增长链端为碳负离子-抗衡阳离子对。
+    \item \textbf{Termination}: In living anionic polymerization, termination is absent unless a terminating agent (e.g., H$_2$O, CO$_2$, alcohol) is deliberately added.  
+      \textbf{终止}：在活性阴离子聚合中，除非特意加入终止剂（如水、CO$_2$、醇），否则不发生终止。
+\end{enumerate}
+
+\subsubsection{活性阴离子聚合 (Living Anionic Polymerization)}
+Under strict anhydrous conditions and with appropriate monomers, anionic polymerization proceeds without termination or chain transfer. This is the classic example of living polymerization.  
+在严格无水条件和合适单体下，阴离子聚合无终止、无链转移进行。这是活性聚合的经典范例。
+
+\textbf{Living characteristics (活性特征)}:
+\begin{itemize}
+    \item $M_n$ increases linearly with conversion.  
+      $M_n$ 随转化率线性增加。
+    \item PDI approaches 1 (typically 1.01–1.05).  
+      PDI 接近 1（通常 1.01–1.05）。
+    \item Chains remain active after monomer is consumed; adding a second monomer yields block copolymers.  
+      单体消耗后链仍保持活性；加入第二种单体可得嵌段共聚物。
+\end{itemize}
+
+\textbf{Example: Synthesis of SBS triblock copolymer (SBS三嵌段共聚物合成)}:
+\[
+\text{styrene} \xrightarrow{\text{sec-BuLi}} \text{PS-Li}^+ \xrightarrow{\text{butadiene}} \text{PS-PB-Li}^+ \xrightarrow{\text{styrene}} \text{PS-PB-PS-Li}^+ \xrightarrow{\text{H}_2\text{O}} \text{SBS}
+\]
+
+\subsection{动力学特征 (Kinetic Features)}
+
+\subsubsection{阳离子聚合 (Cationic)}
+Generally very fast; rate depends on the stability of the carbocation and the counterion. Often requires low temperature to control.  
+通常非常快；速率取决于碳正离子和抗衡离子的稳定性。常需低温控制。
+
+\subsubsection{阴离子聚合 (Anionic)}
+For living anionic polymerization:
+\[
+R_p = k_p [M][M^\bullet] \quad \text{with } [M^\bullet] = [I]_0 \text{ (constant)}
+\]
+Thus $R_p \propto [M]$ (first order in monomer), and $X_n = \frac{[M]_0 - [M]}{[I]_0}$.
+
+\subsection{离子聚合与自由基聚合的比较 (Comparison: Ionic vs. Free Radical)}
+
+\begin{longtable}{p{5cm}p{5cm}p{5cm}}
+\toprule
+\textbf{Feature} & \textbf{Ionic} & \textbf{Free Radical} \\
+\midrule
+Active center & Ion (cation or anion) & Free radical \\
+Sensitivity to impurities & Very high (H$_2$O, O$_2$, polar compounds) & Moderate (mainly O$_2$) \\
+Reaction temperature & Often low (-78°C to 0°C) & Moderate to high (50–150°C) \\
+Living behavior & Possible (anionic, some cationic) & Not in conventional FRP \\
+Suitable monomers & Electron-rich (cationic) or electron-deficient (anionic) & Wide range (vinyl monomers) \\
+Stereocontrol & Possible with counterion design & Limited \\
+Industrial scale & Smaller (specialty polymers) & Very large (commodity plastics) \\
+\bottomrule
+\end{longtable}
+
+\subsection{工业应用 (Industrial Applications)}
+
+\begin{itemize}
+    \item \textbf{Polyisobutylene (PIB)}: Cationic polymerization – used in adhesives, sealants, butyl rubber.  
+      \textbf{聚异丁烯}：阳离子聚合 – 用于粘合剂、密封胶、丁基橡胶。
+    \item \textbf{SBS and SIS triblock copolymers}: Anionic living polymerization – thermoplastic elastomers for footwear, adhesives, asphalt modification.  
+      \textbf{SBS 和 SIS 三嵌段共聚物}：阴离子活性聚合 – 热塑性弹性体，用于鞋底、粘合剂、沥青改性。
+    \item \textbf{Poly(methyl methacrylate) (PMMA)}: Anionic polymerization can produce syndiotactic-rich PMMA.  
+      \textbf{聚甲基丙烯酸甲酯}：阴离子聚合可生产高间规度 PMMA。
+    \item \textbf{Poly(ethylene oxide) (PEO)}: Anionic ring-opening polymerization – used in electrolytes, drug delivery.  
+      \textbf{聚环氧乙烷}：阴离子开环聚合 – 用于电解质、药物递送。
+\end{itemize}
+
+\subsection{考试常见简答题 (Common Exam Questions)}
+
+\textbf{Q1: Compare cationic and anionic polymerization in terms of initiators, monomers, and active centers.}  
+\textbf{比较阳离子聚合和阴离子聚合的引发剂、单体和活性中心。}
+
+\textbf{A}: 
+\begin{itemize}
+    \item \textbf{Cationic}: Active center = carbocation; initiators = Lewis acids + co-initiator (e.g., BF$_3$ + H$_2$O); monomers = electron-rich (isobutylene, vinyl ethers).
+    \item \textbf{Anionic}: Active center = carbanion; initiators = strong nucleophiles (e.g., butyllithium); monomers = electron-deficient (styrene, butadiene, acrylates).
+\end{itemize}
+
+\textbf{Q2: Why is anionic polymerization often "living"? What conditions are required?}  
+\textbf{为什么阴离子聚合通常是“活性”聚合？需要什么条件？}
+
+\textbf{A}: Under strict anhydrous, oxygen-free conditions and with appropriate monomers (no acidic protons), termination and chain transfer are absent. The carbanion is stable and remains active until deliberately terminated. This allows linear $M_n$ vs. conversion, narrow PDI, and block copolymer synthesis.
+
+\textbf{Q3: Give an example of an industrial polymer made by cationic polymerization.}  
+\textbf{举出一个通过阳离子聚合生产的工业聚合物例子。}
+
+\textbf{A}: Polyisobutylene (PIB), produced from isobutylene using BF$_3$ + H$_2$O at low temperature. Copolymerization with isoprene gives butyl rubber.
+
+\subsection{关键术语速查 (Key Terms)}
+
+\begin{longtable}{p{5.5cm}p{5.5cm}}
+\toprule
+\textbf{English} & \textbf{中文} \\
+\midrule
+Ionic polymerization & 离子聚合 \\
+Cationic polymerization & 阳离子聚合 \\
+Anionic polymerization & 阴离子聚合 \\
+Carbocation & 碳正离子 \\
+Carbanion & 碳负离子 \\
+Lewis acid & 路易斯酸 \\
+Co-initiator / Protogen & 共引发剂 \\
+Butyllithium (BuLi) & 丁基锂 \\
+Living anionic polymerization & 活性阴离子聚合 \\
+Polyisobutylene (PIB) & 聚异丁烯 \\
+Butyl rubber & 丁基橡胶 \\
+SBS triblock copolymer & SBS三嵌段共聚物 \\
+Thermoplastic elastomer (TPE) & 热塑性弹性体 \\
+Electron-withdrawing group & 吸电子基团 \\
+Electron-donating group & 给电子基团 \\
+\bottomrule
+\end{longtable}
+
+\section{活性自由基聚合 (Living Radical Polymerization, LRP)}
+
+\subsection{定义与特点 (Definition and Characteristics)}
+
+Traditional free radical polymerization (FRP) suffers from unavoidable termination and chain transfer, making it impossible to achieve "living" behavior (i.e., all chains growing simultaneously with no termination).  
+传统自由基聚合 (FRP) 存在不可避免的终止和链转移，无法实现“活性”行为（即所有链同时增长且无终止）。
+
+\textbf{Living radical polymerization (LRP)} refers to radical polymerization methods that suppress termination and chain transfer, allowing control over molecular weight, narrow polydispersity (PDI $\rightarrow$ 1), and the synthesis of block copolymers.  
+\textbf{活性自由基聚合 (LRP)} 是指通过抑制终止和链转移，实现对分子量、窄分布 (PDI $\rightarrow$ 1) 以及嵌段共聚物合成的控制的自由基聚合方法。
+
+\textbf{Key features (关键特征)}:
+\begin{itemize}
+    \item \textbf{Living character}: Chains grow simultaneously and remain active until monomer is consumed.  
+      \textbf{活性特征}：所有链同时增长并保持活性直至单体消耗完毕。
+    \item \textbf{Controlled molecular weight}: $M_n$ increases linearly with conversion.  
+      \textbf{分子量可控}：$M_n$ 随转化率线性增加。
+    \item \textbf{Narrow distribution}: PDI typically 1.05–1.3.  
+      \textbf{窄分布}：PDI 通常为 1.05–1.3。
+    \item \textbf{Chain-end functionality}: Polymer chains retain reactive end groups for further functionalization or block extension.  
+      \textbf{链端官能化}：聚合物链保留反应性端基，可进一步官能化或扩链。
+\end{itemize}
+
+\subsection{核心原理：休眠种与活性种的平衡 (Core Principle: Dormant-Active Equilibrium)}
+
+LRP is achieved by establishing a fast equilibrium between a small concentration of active propagating radicals and a large concentration of dormant species.  
+LRP 通过在少量活性增长自由基与大量休眠种之间建立快速平衡来实现。
+
+\[
+P_n-X \quad \rightleftharpoons \quad P_n^\bullet + X^\bullet
+\]
+(dormant) \hspace{2cm} (active) \hspace{2cm} (persistent radical)
+
+The persistent radical ($X^\bullet$) reversibly caps the active chain end, greatly reducing the steady-state concentration of free radicals, thus suppressing termination.  
+持久性自由基 ($X^\bullet$) 可逆地封闭活性链端，大大降低自由基的稳态浓度，从而抑制终止。
+
+\textbf{Consequences (结果)}:
+\begin{itemize}
+    \item Termination is not eliminated but greatly reduced ($<1\%$ of chains terminate).  
+      终止未被消除但被大大减少（少于1\%的链终止）。
+    \item All chains grow at nearly the same rate $\rightarrow$ narrow PDI.  
+      所有链以几乎相同的速率增长 $\rightarrow$ 窄 PDI。
+    \item Chain length is determined by $[M]_0/[I]_0$ (monomer-to-initiator ratio).  
+      链长由 $[M]_0/[I]_0$（单体/引发剂比例）决定。
+\end{itemize}
+
+\subsection{主要活性自由基聚合方法 (Main LRP Methods)}
+
+\begin{longtable}{p{3.5cm}p{5cm}p{5cm}}
+\toprule
+\textbf{Method (方法)} & \textbf{Mechanism (机理)} & \textbf{Typical PDI / Features (典型PDI/特点)} \\
+\midrule
+\textbf{NMP} (Nitroxide-Mediated Polymerization) & Uses stable nitroxide radical (e.g., TEMPO) to reversibly cap chain end.  
+使用稳定氮氧自由基（如TEMPO）可逆封闭链端。 & PDI $\sim$ 1.1–1.3; works best for styrenics.  
+适用于苯乙烯类单体。 \\
+\textbf{ATRP} (Atom Transfer Radical Polymerization) & Transition metal complex (e.g., CuBr/bipyridine) catalyzes reversible halogen transfer.  
+过渡金属配合物（如CuBr/联吡啶）催化可逆卤原子转移。 & PDI $\sim$ 1.05–1.2; very versatile (acrylates, styrene, etc.).  
+适用性广（丙烯酸酯、苯乙烯等）。 \\
+\textbf{RAFT} (Reversible Addition-Fragmentation Chain Transfer) & Uses thiocarbonylthio compounds (e.g., dithioesters) as chain transfer agents.  
+使用硫代羰基硫化合物（如二硫代酯）作为链转移剂。 & PDI $\sim$ 1.05–1.2; most functional group tolerant.  
+官能团耐受性最好。 \\
+\bottomrule
+\end{longtable}
+
+\subsection{动力学特征 (Kinetic Features)}
+
+\textbf{Molecular weight evolution (分子量演变)}:
+\[
+M_n = \frac{[M]_0 - [M]}{[I]_0} \times M_0 + M_{\text{initiator}}
+\]
+where $[M]_0$ and $[I]_0$ are initial monomer and initiator concentrations, $M_0$ is monomer molecular weight.  
+其中 $[M]_0$ 和 $[I]_0$ 为初始单体和引发剂浓度，$M_0$ 为单体分子量。
+
+Thus, $M_n$ increases linearly with conversion (similar to living anionic polymerization).  
+因此，$M_n$ 随转化率线性增加（类似于活性阴离子聚合）。
+
+\textbf{Conversion vs. MW curve (转化率-分子量曲线)}:  
+A straight line from origin to high conversion, indicating $M_n \propto$ conversion.  
+一条从原点延伸到高转化率的直线，表明 $M_n$ 与转化率成正比。
+
+\subsection{与活性阴离子聚合的比较 (Comparison with Living Anionic Polymerization)}
+
+\begin{longtable}{p{5.5cm}p{5.5cm}}
+\toprule
+\textbf{Living Anionic (活性阴离子)} & \textbf{LRP (活性自由基)} \\
+\midrule
+Extremely sensitive to moisture, oxygen, impurities & Tolerant to many functional groups and solvents \\
+对水、氧、杂质极度敏感 & 对多种官能团和溶剂耐受 \\
+Requires very low temperature (often -78°C) & Can be run at 60–120°C \\
+需极低温度（常为-78°C） & 可在60–120°C进行 \\
+Very narrow PDI (1.01–1.05) & Narrow PDI (1.05–1.3) \\
+PDI极窄 (1.01–1.05) & PDI窄 (1.05–1.3) \\
+Only for monomers with electron-withdrawing groups & Applicable to many vinyl monomers (styrene, acrylates, etc.) \\
+仅适用于吸电子基团单体 & 适用于多种乙烯基单体（苯乙烯、丙烯酸酯等） \\
+\bottomrule
+\end{longtable}
+
+\subsection{应用 (Applications)}
+\begin{itemize}
+    \item Synthesis of \textbf{block copolymers} (e.g., PS-b-PMMA, PS-b-PBA) – impossible with conventional FRP.  
+      \textbf{嵌段共聚物}的合成 – 传统FRP无法实现。
+    \item Synthesis of \textbf{star polymers}, \textbf{brush polymers}, and other complex architectures.  
+      \textbf{星形聚合物}、\textbf{刷状聚合物}等复杂结构。
+    \item Preparation of \textbf{functional polymers} with well-defined end groups.  
+      制备具有明确端基的\textbf{官能化聚合物}。
+    \item \textbf{Nanoparticle synthesis} (polymer-grafted nanoparticles).  
+      \textbf{纳米粒子合成}（聚合物接枝纳米粒子）。
+\end{itemize}
+
+\subsection{考试常见简答题 (Common Exam Questions)}
+
+\textbf{Q1: What is living radical polymerization? How does it differ from conventional free radical polymerization?}  
+\textbf{什么是活性自由基聚合？它与传统自由基聚合有何不同？}
+
+\textbf{A (English)}: Living radical polymerization (LRP) is a controlled radical polymerization method that suppresses termination and chain transfer through a reversible activation-deactivation equilibrium. Key differences from conventional FRP: (1) $M_n$ increases linearly with conversion; (2) PDI is narrow (1.05–1.3 vs. 1.5–2.0); (3) chain ends remain active, allowing block copolymer synthesis; (4) termination is minimized but not completely eliminated.
+
+\textbf{A (中文)}：活性自由基聚合 (LRP) 是一种通过可逆活化-失活平衡抑制终止和链转移的可控自由基聚合方法。与传统FRP的主要区别：(1) $M_n$随转化率线性增加；(2) PDI窄（1.05–1.3 vs 1.5–2.0）；(3) 链端保持活性，可合成嵌段共聚物；(4) 终止被最小化但未完全消除。
+
+\textbf{Q2: Name three common LRP methods and briefly describe their mechanisms.}  
+\textbf{列举三种常见LRP方法并简述其机理。}
+
+\textbf{A}: 
+\begin{itemize}
+    \item \textbf{NMP}: Uses stable nitroxide radical (e.g., TEMPO) to reversibly cap the chain end.
+    \item \textbf{ATRP}: Transition metal complex catalyzes reversible halogen atom transfer between dormant and active species.
+    \item \textbf{RAFT}: Uses thiocarbonylthio chain transfer agent; reversible addition-fragmentation transfers the active radical.
+\end{itemize}
+
+\textbf{Q3: Why is LRP called "living" even though some termination still occurs?}  
+\textbf{为什么LRP仍被称为“活性”，尽管仍有一定程度的终止？}
+
+\textbf{A}: The term "living" is used because the majority of chains (>99\%) remain active throughout the polymerization, and the system exhibits the key features of living polymerization: linear increase of $M_n$ with conversion, narrow PDI, and ability to form block copolymers. The small amount of termination does not destroy the living character.
+
+\subsection{关键术语 (Key Terms)}
+
+\begin{longtable}{p{5.5cm}p{5.5cm}}
+\toprule
+\textbf{English} & \textbf{中文} \\
+\midrule
+Living radical polymerization (LRP) & 活性自由基聚合 \\
+Controlled radical polymerization (CRP) & 可控自由基聚合 \\
+Nitroxide-mediated polymerization (NMP) & 氮氧稳定自由基聚合 \\
+Atom transfer radical polymerization (ATRP) & 原子转移自由基聚合 \\
+Reversible addition-fragmentation chain transfer (RAFT) & 可逆加成-断裂链转移 \\
+Dormant species & 休眠种 \\
+Active species & 活性种 \\
+Persistent radical effect & 持久性自由基效应 \\
+Block copolymer & 嵌段共聚物 \\
+\bottomrule
+\end{longtable}
+
+\section{考试常见简答题 (Common Short-Answer Questions)}
+
+\begin{enumerate}
+    \item \textbf{Compare chain-growth and step-growth polymerization. (至少列出4点)}  
+    \textbf{Answer}: See table at beginning of Week 4.
+
+    \item \textbf{Write the three steps of free radical polymerization with equations.}  
+    \textbf{Answer}: Initiation ($I \rightarrow 2R^\bullet$, $R^\bullet + M \rightarrow RM^\bullet$), Propagation ($RM_n^\bullet + M \rightarrow RM_{n+1}^\bullet$), Termination (coupling or disproportionation).
+
+    \item \textbf{Explain the steady-state assumption and derive the expression for $R_p$.}  
+    \textbf{Answer}: $R_i = R_t \Rightarrow [M^\bullet] = (f k_d [I]/k_t)^{1/2}$, then $R_p = k_p [M] [M^\bullet] = k_p (f k_d/k_t)^{1/2} [M][I]^{1/2}$.
+
+    \item \textbf{What is auto-acceleration? Why does it occur?}  
+    \textbf{Answer}: Viscosity increase hinders termination, causing radical concentration to rise and rate to increase dramatically.
+
+    \item \textbf{List four types of chain transfer.}  
+    \textbf{Answer}: To monomer, initiator, solvent, polymer, or added chain transfer agent.
+
+    \item \textbf{Differentiate between bulk, solution, suspension, and emulsion polymerization.}  
+    \textbf{Answer}: See table in section 2.7.
+
+    \item \textbf{Why is anionic polymerization called "living"?}  
+    \textbf{Answer}: No termination or chain transfer; polymer chains remain active and can continue growing when more monomer is added. PDI approaches 1.
+
+    \item \textbf{Write the chemical equation for polyurethane formation.}  
+    \textbf{Answer}: $\text{OCN-R-NCO} + \text{HO-R'-OH} \rightarrow \text{Polyurethane}$.
+\end{enumerate}
+
+\section{Week 4 关键术语速查表 (Quick Glossary)}
+
+\begin{longtable}{p{5.5cm}p{5.5cm}}
+\toprule
+\textbf{English} & \textbf{中文} \\
+\midrule
+Free radical polymerization (FRP) & 自由基聚合 \\
+Initiator & 引发剂 \\
+Benzoyl peroxide (BPO) & 过氧苯甲酰 \\
+AIBN & 偶氮二异丁腈 \\
+Initiation efficiency ($f$) & 引发效率 \\
+Cage effect & 笼蔽效应 \\
+Propagation & 链增长 \\
+Termination & 终止 \\
+Coupling / Combination & 偶合终止 \\
+Disproportionation & 歧化终止 \\
+Chain transfer & 链转移 \\
+Steady-state assumption & 稳态假设 \\
+Auto-acceleration / Trommsdorff effect & 自动加速现象 / 凝胶效应 \\
+Ceiling temperature & 上限温度 \\
+Bulk polymerization & 本体聚合 \\
+Solution polymerization & 溶液聚合 \\
+Suspension polymerization & 悬浮聚合 \\
+Emulsion polymerization & 乳液聚合 \\
+Ionic polymerization & 离子聚合 \\
+Cationic polymerization & 阳离子聚合 \\
+Anionic polymerization & 阴离子聚合 \\
+Living polymerization & 活性聚合 \\
+Polycarbonate (PC) & 聚碳酸酯 \\
+Bisphenol A (BPA) & 双酚A \\
+Polyurethane (PU) & 聚氨酯 \\
+Isocyanate & 异氰酸酯 \\
+Diol & 二醇 \\
+\bottomrule
+\end{longtable}
+
+\end{document}
