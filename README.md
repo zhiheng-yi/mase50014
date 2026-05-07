@@ -36,7 +36,7 @@ This repository contains learning materials and experimental work for the course
 
 3. **Reproduce the experiment figures** – Navigate to `water-beads-experiment/` and run:
    ```r
-   source("hydrogel_visualization.R")
+   source("Visualization_Codes.R")
    ```
    Make sure required R packages (`ggplot2`, `dplyr`, `tidyr`, `gridExtra`, `scales`) are installed.
 
@@ -55,4 +55,4 @@ This repository is for educational purposes. The code and data are shared under 
 
 ---
 
-*Last updated: 2026-05-05*
+*Last updated: 2026-05-07*
