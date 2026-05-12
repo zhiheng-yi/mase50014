@@ -1,0 +1,325 @@
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[bf,small]{caption}
+\usepackage{hyperref}
+\usepackage{float}
+
+\title{\textbf{合成高分子课堂笔记（二）}\\\large Commercialized and Engineering Polymers}
+\author{Zhiheng Yi}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{基本概念与分类（Basic Concepts \& Classification）}
+
+\subsection{关键定义（Key Definitions）}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Monomer / 单体}: A small molecule that can react chemically with other monomers to form a polymer chain. （能与其他单体反应形成聚合物链的小分子。）
+    \item \textbf{Polymer / 聚合物}: A large macromolecule composed of many repeating structural units (monomers) connected by covalent bonds. （由许多重复结构单元通过共价键连接而成的大分子。）
+    \item \textbf{Degree of Polymerization (DP) / 聚合度}: The number of monomer units in a polymer chain. $DP = M_n / M_0$ where $M_n$ is number-average molecular weight, $M_0$ is monomer molecular weight. （聚合物链中单体单元的数目。）
+    \item \textbf{Number-average molecular weight ($M_n$) / 数均分子量}: Total weight of all polymer chains divided by the number of chains. （按聚合物链的数量平均的分子量。）
+    \item \textbf{Weight-average molecular weight ($M_w$) / 重均分子量}: Weighted by the mass of chains; always larger than $M_n$ for polydisperse samples. （按链的质量加权平均的分子量，对于多分散样品通常大于$M_n$。）
+    \item \textbf{Polydispersity index (PDI)}: $M_w / M_n$; indicates the breadth of molecular weight distribution. （分子量分布宽度指数。）
+    \item \textbf{End group / 端基}: The functional group at the end of a polymer chain, important for characterization and further reactions. （聚合物链末端的官能团。）
+    \item \textbf{Crosslinking / 交联}: Covalent bonds that connect adjacent polymer chains, forming a three-dimensional network. High crosslink density gives thermosets; low density gives elastomers. （相邻聚合物链之间的共价连接，形成三维网络。高交联密度→热固性塑料；低交联密度→弹性体。）
+    \item \textbf{Thermoplastic / 热塑性塑料}: Polymers that soften when heated and harden when cooled; process is reversible; recyclable. Chains are linear or branched, not crosslinked. （加热软化、冷却硬化，过程可逆，可回收。链为线形或支化，无交联。）
+    \item \textbf{Thermoset / 热固性塑料}: Polymers that undergo irreversible crosslinking during curing; once set, they cannot be remelted or reshaped. （固化过程中发生不可逆交联，一旦成型不能再熔化或重塑。）
+    \item \textbf{Elastomer / 弹性体}: Polymers with low crosslinking density that can be stretched to high strains and return to original shape; rubber-like. （低交联密度聚合物，可高倍拉伸并恢复原状，类似橡胶。）
+\end{itemize}
+
+\subsection{聚合物拓扑结构（Polymer Topology）}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Linear polymer / 线形聚合物}: Chains without branches; chains slide easily → thermoplastic. Example: HDPE. （无支链，链易滑动→热塑性。）
+    \item \textbf{Branched polymer / 支化聚合物}: Linear backbone with side chains; more heat needed to soften; still thermoplastic. Example: LDPE. （主链带有侧链，需要更多热量软化，仍为热塑性。）
+    \item \textbf{Crosslinked network / 交联网络}: Adjacent chains covalently bonded → thermoset; cannot be reformed. Example: epoxy, vulcanized rubber. （相邻链共价键合→热固性，不能重塑。例：环氧树脂，硫化橡胶。）
+    \item \textbf{Block copolymer / 嵌段共聚物}: A polymer consisting of long sequences (blocks) of one monomer followed by blocks of another monomer. Example: ABA triblock copolymer. （由一种单体的长链段与另一种单体的长链段交替组成。例：ABA。）
+    \item \textbf{Graft copolymer / 接枝共聚物}: A backbone of one type of repeat unit with branches (grafts) consisting of another repeat unit. （一种重复单元构成主链，另一种重复单元构成侧链“接枝”。）
+    \item \textbf{Random copolymer / 无规共聚物}: Two monomers randomly distributed along the chain. （两种单体沿链随机分布。）
+    \item \textbf{Alternating copolymer / 交替共聚物}: Monomers alternate perfectly: ABABAB... （单体完美交替：ABABAB…）
+\end{itemize}
+
+\subsection{热性能分类（Thermal Properties）}
+
+Thermoplastic, softens when heating, can be reshaped, recyclable. Thermoset, remains rigid, cannot reshape, non-recyclable.
+
+
+
+\subsection{天然与合成聚合物（Natural vs Synthetic Polymers）}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Natural polymers / 天然聚合物}: Cotton (纤维素), starch (淀粉), natural rubber (聚异戊二烯), silk (丝蛋白), cellulose (纤维素), wool (羊毛), DNA, proteins (蛋白质).
+    \item \textbf{Synthetic polymers / 合成聚合物}: Plastic bags, polyester fiber, synthetic rubber (SBR, etc.), polyurethane foams, polyethylene, nylon, PVC, PS, PET, ABS, PC.
+    \item \textbf{Raw materials / 原料来源}: Crude oil or natural gas → petrochemicals (ethylene, propylene, styrene, etc.). （原油或天然气→石化产品（乙烯、丙烯、苯乙烯等）。）
+\end{itemize}
+
+\subsection{聚合物应用分类（Application-based Classification）}
+\begin{itemize}[leftmargin=*]
+    \item Plastic（塑料）, Fiber（纤维）, Rubber（橡胶）, Adhesive（粘合剂）, Surface coating（涂料）, Foam（泡沫）.
+\end{itemize}
+
+\section{聚合物结构层次（Levels of Polymer Structure）}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Atomic level (原子级)}: Chemical structure of the repeat unit. Single bonds give flexible chains (e.g., PE); rigid aromatic rings give stiffness (e.g., Kevlar, PET). （重复单元的化学结构。单键→柔顺链；刚性芳环→刚性链。）
+    \item \textbf{Molecular level (分子级)}: Topology (linear, branched, network, helical), degree of polymerization, copolymer type. （拓扑结构、聚合度、共聚物类型。）
+    \item \textbf{Crystallinity (结晶度)}: 
+        \begin{itemize}
+            \item Amorphous (无定形): No long-range order; exhibits glass transition temperature $T_g$.
+            \item Crystalline (结晶): Ordered domains; exhibits melting temperature $T_m$.
+            \item Semicrystalline (半结晶): Combination of crystalline and amorphous regions. Most common.
+        \end{itemize}
+    \item \textbf{Phase behavior (相行为)}: How two or more polymers mix or phase separate. （多种聚合物混合时的相容性或相分离。）
+\end{enumerate}
+
+\section{大宗商品聚合物（Commodity Polymers）}
+
+\subsection{聚烯烃（Polyolefins）}
+\subsubsection{聚乙烯（Polyethylene, PE）}
+Monomer: ethylene ($\mathrm{CH_2=CH_2}$). Polymerization: addition (free radical, Ziegler-Natta, metallocene).
+\begin{itemize}[leftmargin=*]
+    \item \textbf{LDPE (Low-Density Polyethylene / 低密度聚乙烯)}: Highly branched; low crystallinity ($\sim$40-50\%); $T_g \approx -125\,^\circ$C, $T_m \approx 105-115\,^\circ$C. Soft, flexible. Uses: squeeze bottles, film, tubing.
+    \item \textbf{HDPE (High-Density Polyethylene / 高密度聚乙烯)}: Linear; high crystallinity ($\sim$70-80\%); $T_g \approx -125\,^\circ$C, $T_m \approx 125-135\,^\circ$C. Stiff, strong. Uses: milk jugs, pipes, containers.
+    \item \textbf{UHMWPE (Ultra-High Molecular Weight Polyethylene / 超高分子量聚乙烯)}: Very high molecular weight (数百万 g/mol); excellent abrasion resistance; $T_m \approx 130-140\,^\circ$C. Uses: artificial joints, ballistic vests.
+\end{itemize}
+
+\subsubsection{聚丙烯（Polypropylene, PP）}
+Monomer: propylene ($\mathrm{CH_3CH=CH_2}$). $T_g \approx 0\,^\circ$C (isotactic), $T_m \approx 160-170\,^\circ$C. Uses: carpet fibers, ropes, pipes, food containers, automotive parts. （等规PP的半结晶性，刚性优于PE。）
+
+\subsubsection{聚苯乙烯（Polystyrene, PS）}
+Monomer: styrene ($\mathrm{C_6H_5CH=CH_2}$). Atactic PS: amorphous, $T_g \approx 100\,^\circ$C, brittle. Uses: packaging foam (expanded PS), lighting panels, appliance components. （无规PS是无定形、脆性的。）
+
+\subsubsection{聚氯乙烯（Polyvinyl Chloride, PVC）}
+Monomer: vinyl chloride ($\mathrm{CH_2=CHCl}$). $T_g \approx 80\,^\circ$C (depends on plasticizer). Rigid PVC (unplasticized) and flexible PVC (with plasticizers). Uses: pipes, electrical wire insulation, raincoats, toys.
+
+\subsection{树脂识别码（Resin Identification Code）}
+\begin{table}[H]
+\centering
+\begin{tabular}{cll}
+\toprule
+\textbf{Code} & \textbf{Polymer} & \textbf{Recyclable / 可回收} \\
+\midrule
+1 & PETE (PET) & Yes \\
+2 & HDPE & Yes \\
+3 & PVC & Limited \\
+4 & LDPE & Sometimes \\
+5 & PP & Yes \\
+6 & PS & Limited \\
+7 & Other (PC, PLA, etc.) & Varies \\
+\bottomrule
+\end{tabular}
+\caption{Plastic recycling codes（塑料回收代码）}
+\end{table}
+Note: Recyclable plastic ≠ automatically reused; proper sorting required. （可回收塑料不等于自动被再利用，需要正确分类。）
+
+
+\section{工程聚合物（Engineering Polymers）}
+
+\subsection{聚对苯二甲酸乙二醇酯（Polyethylene Terephthalate, PET）}
+\begin{itemize}[leftmargin=*]
+    \item Family: Polyester (ester linkage $-\mathrm{COO}-$ in main chain). （主链含酯键。）
+    \item Monomers: Ethylene glycol (EG) + Terephthalic acid (TPA) or Dimethyl terephthalate (DMT). （乙二醇+对苯二甲酸或对苯二甲酸二甲酯。）
+    \item Polymerization: Condensation (step-growth). （缩聚反应。）
+    \item Thermal transitions: $T_g \approx 70-80\,^\circ$C, $T_m \approx 250-260\,^\circ$C. （PPT提到软化温度70$^\circ$C，即接近$T_g$。）
+    \item Properties: High stiffness and strength (due to aromatic ring); semicrystalline when drawn; transparent when rapidly cooled; good gas barrier. （高刚性和强度（芳环贡献）；拉伸后半结晶；快速冷却时透明；优良的气体阻隔性。）
+    \item Applications: Carbonated beverage bottles, textile fibers (polyester), food jars, Mylar films, face shields. （碳酸饮料瓶、涤纶纤维、食品罐、麦拉膜、防护面罩。）
+    \item Limitation: Low $T_g$ – not for hot-filling (>70$^\circ$C). （玻璃化转变温度低，不适用于热灌装。）
+\end{itemize}
+
+\subsection{聚酰胺（Polyamide, PA / Nylon）}
+\begin{itemize}[leftmargin=*]
+    \item Family: Contains amide group ($-\mathrm{CONH}-$). （含酰胺键。）
+    \item Natural: Proteins (wool, silk).  Synthetic: Nylon.
+    \item \textbf{Nylon 6,6}:
+        \begin{itemize}
+            \item Monomers: Hexamethylenediamine (C6 diamine) + Adipic acid (C6 diacid). （己二胺+己二酸。）
+            \item Polymerization: Condensation (eliminates water). （缩聚，失水。）
+            \item Thermal transitions: $T_g \approx 50-60\,^\circ$C, $T_m \approx 260-265\,^\circ$C.
+            \item Properties: High strength, toughness, abrasion resistance, good solvent resistance due to hydrogen bonding between chains. （高强度、韧性、耐磨性、良好的耐溶剂性（链间氢键）。）
+            \item History: DuPont (1935); first commercial use in toothbrushes (1938); women's stockings (1940).
+        \end{itemize}
+    \item \textbf{Nylon 6} (from caprolactam via ring-opening polymerization): $T_g \approx 50-55\,^\circ$C, $T_m \approx 220-225\,^\circ$C.
+\end{itemize}
+
+\subsection{聚碳酸酯（Polycarbonate, PC）}
+\begin{itemize}[leftmargin=*]
+    \item Monomers: Bisphenol A + Phosgene (or diphenyl carbonate). （双酚A+光气。）
+    \item Polymerization: Condensation (step-growth).
+    \item Thermal transitions: $T_g \approx 145-150\,^\circ$C; typically amorphous (no distinct $T_m$). （无定形，仅有玻璃化转变。）
+    \item Properties: Transparent, very high impact resistance (shatterproof), high refractive index (1.586) → thinner lenses. （透明、极高抗冲击性（防碎）、高折射率→镜片更薄。）
+    \item Applications: Eyeglass lenses, bulletproof glass, lightweight windows, electronic components. （眼镜镜片、防弹玻璃、轻质窗户、电子元件。）
+\end{itemize}
+
+\subsection{丙烯腈-丁二烯-苯乙烯共聚物（Acrylonitrile Butadiene Styrene, ABS）}
+\begin{itemize}[leftmargin=*]
+    \item Composition: 15-35\% acrylonitrile, 5-30\% butadiene, 40-60\% styrene.
+    \item Polymerization: Emulsion or bulk polymerization.
+    \item Thermal transitions: $T_g$ of styrene-acrylonitrile (SAN) matrix $\approx 105\,^\circ$C; butadiene rubber phase provides low temperature toughness (butadiene $T_g \approx -85\,^\circ$C). Overall ABS is amorphous with $T_g \approx 105\,^\circ$C (no sharp $T_m$).
+    \item Role of each component:
+        \begin{itemize}
+            \item Acrylonitrile (丙烯腈): Chemical resistance, heat stability.
+            \item Butadiene (丁二烯): Toughness, impact strength (rubber toughening).
+            \item Styrene (苯乙烯): Rigidity, processability (easy injection molding).
+        \end{itemize}
+    \item Properties: Opaque, impact-resistant, amorphous thermoplastic; good for 3D printing (FDM filament). （不透明、抗冲击、无定形热塑性塑料；适合3D打印。）
+    \item Applications: LEGO bricks, automotive interior parts, home appliances, electronics housings. （乐高积木、汽车内饰、家电、电子设备外壳。）
+\end{itemize}
+
+\subsection{聚氨酯（Polyurethane, PU）}
+\begin{itemize}[leftmargin=*]
+    \item Monomers: Diisocyanate (e.g., MDI, TDI) + Polyol (diol or triol).
+    \item Polymerization: Step-growth forming urethane linkage ($-\mathrm{NH-CO-O}-$).
+    \item Can be thermoplastic (TPU) or thermoset (crosslinked foams).
+    \item $T_g$ varies widely from $-50\,^\circ$C to $+150\,^\circ$C depending on soft/hard segment ratio.
+    \item Applications: Flexible foams (mattresses), rigid foams (insulation), elastomers (wheels, seals), coatings, adhesives, Spandex fibers.
+\end{itemize}
+
+\subsection{纤维素及其衍生物（Cellulose and Derivatives）}
+\begin{itemize}[leftmargin=*]
+    \item Natural polymer from wood, cotton; polysaccharide of glucose; extensive hydrogen bonding → high crystallinity. （天然聚合物，来自木材、棉花；葡萄糖多糖；广泛的氢键→高结晶度。）
+    \item Derivatives: Cellulose nitrate (early plastic), cellulose acetate (textiles), hydroxyethylcellulose (HEC).
+    \item Hydroxyethylcellulose: Water-soluble, non-crystalline; used as thickener in shampoos to suspend dirt. （水溶性、非结晶；用作洗发水增稠剂，悬浮污垢。）
+\end{itemize}
+
+
+\section{高性能聚合物（High Performance Polymers）}
+
+\begin{longtable}{p{2.8cm}p{3cm}p{3cm}p{4cm}}
+\caption{High Performance Polymers / 高性能聚合物}
+\tabularnewline
+\toprule
+\textbf{Polymer} & $\mathbf{T_g}$ (\textdegree C) & $\mathbf{T_m}$ (\textdegree C) & \textbf{Key Properties \& Applications} \\
+\midrule
+PEEK (聚醚醚酮) & $\sim$143 & $\sim$343 & High temp resistance ($>$250\,$^\circ$C continuous), chemical resistance; aerospace, medical implants. \\
+PTFE (聚四氟乙烯) & $\sim$115 & $\sim$327 & Very low friction, non-stick (Teflon); coatings, gaskets, bearings. \\
+PDMS (聚二甲基硅氧烷) & $\sim$-123 & -- (amorphous) & Silicone elastomer, biocompatible; soft lithography, contact lenses. \\
+Kevlar (聚对苯二甲酰对苯二胺) & $\sim$360 (decomposes) & No $T_m$ (decomposes) & High tensile strength, aromatic rigid chains; bulletproof vests, composites. \\
+PI (聚酰亚胺) & $>$250 & -- (amorphous or semicrystalline) & High thermal stability (up to 400$^\circ$C); Kapton tape, flexible circuits. \\
+PVDF (聚偏氟乙烯) & $\sim$-40 & $\sim$170 & Piezoelectric, chemical resistant; sensors, membranes. \\
+\bottomrule
+\end{longtable}
+
+\section{催化剂与聚合方法（Catalysts \& Polymerization Methods）}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Ziegler-Natta catalysts} (齐格勒-纳塔催化剂): Transition metal (Ti, Zr) + organoaluminum compound. Enable stereoregular polymerization (isotactic PP) and high molecular weight at mild conditions. Important for HDPE, isotactic PP.
+    \item \textbf{Metallocene catalysts} (茂金属催化剂): Single-site catalysts giving very narrow molecular weight distribution.
+    \item \textbf{Free radical polymerization} (自由基聚合): Used for LDPE (high pressure), PS, PVC.
+\end{itemize}
+
+\section{塑料回收与污染（Plastic Recycling \& Pollution）}
+\begin{itemize}[leftmargin=*]
+    \item Reduce single-use plastics.
+    \item Recycle according to resin codes (1, 2, 5 are most recycled).
+    \item For unrecyclable plastics: chemical breakdown (pyrolysis, hydrolysis, biodegradation). （对于不可回收塑料，化学分解——热解、水解、生物降解。）
+    \item Bioplastics (生物塑料): From renewable resources (corn starch, cellulose). Not all bioplastics are biodegradable; some are durable (e.g., bio-PET). （来自可再生资源，并非所有生物塑料都可生物降解，有些是耐用的。）
+\end{itemize}
+
+
+\section*{附录1：常用聚合物中英文对照及热性能速查表}
+\addcontentsline{toc}{section}{附录1：常用聚合物中英文对照及热性能速查表}
+\begin{longtable}{p{2cm}p{3.5cm}p{1.8cm}p{1.8cm}p{3.5cm}}
+\toprule
+\textbf{Polymer} & \textbf{} & $\mathbf{T_g}$ (\textdegree C) & $\mathbf{T_m}$ (\textdegree C) & \textbf{Application Example} \\
+\midrule
+LDPE & 低密度聚乙烯 & -125 & 105-115 & Squeeze bottles \\
+HDPE & 高密度聚乙烯 & -125 & 125-135 & Milk jugs, pipes \\
+UHMWPE & 超高分子量聚乙烯 & -125 & 130-140 & Artificial joints \\
+PP (isotactic) & 等规聚丙烯 & 0 & 160-170 & Carpet fibers, cups \\
+PS (atactic) & 无规聚苯乙烯 & 100 & -- (amorphous) & Foam packaging \\
+PVC (rigid) & 硬质聚氯乙烯 & 80 & -- (amorphous) & Pipes, window frames \\
+PET & 聚对苯二甲酸乙二醇酯 & 70-80 & 250-260 & Beverage bottles, fibers \\
+Nylon 6,6 & 尼龙66 & 50-60 & 260-265 & Textiles, brushes, gears \\
+Nylon 6 & 尼龙6 & 50-55 & 220-225 & Carpets, fibers \\
+PC & 聚碳酸酯 & 145-150 & amorphous & Eyeglass lenses, bulletproof glass \\
+ABS & ABS树脂 & $\sim$105 & amorphous & LEGO bricks, electronics \\
+PEEK & 聚醚醚酮 & 143 & 343 & Aerospace, medical implants \\
+PTFE & 聚四氟乙烯 & 115 & 327 & Non-stick coatings \\
+Kevlar & 凯夫拉（芳纶） & 360 (decomp.) & no $T_m$ & Bulletproof vests \\
+PDMS & 聚二甲基硅氧烷 & -123 & amorphous & Soft contact lenses, sealants \\
+PI & 聚酰亚胺 & $>$250 & varies & Kapton tape, flexible PCBs \\
+\bottomrule
+\caption{Comprehensive Polymer Datasheet}
+\end{longtable}
+
+\section*{附录2：中英文术语对照表}
+\addcontentsline{toc}{section}{附录2：中英文术语对照表}
+\begin{longtable}{p{10cm}p{5cm}}
+\toprule
+\textbf{English} & \textbf{中文} \\
+\midrule
+Addition polymerization & 加聚反应 \\
+Condensation polymerization & 缩聚反应 \\
+Degree of polymerization (DP) & 聚合度 \\
+Number-average molecular weight ($M_n$) & 数均分子量 \\
+Weight-average molecular weight ($M_w$) & 重均分子量 \\
+Polydispersity index (PDI) & 多分散指数 \\
+End group & 端基 \\
+Crosslinking & 交联 \\
+Thermoplastic & 热塑性塑料 \\
+Thermoset & 热固性塑料 \\
+Elastomer & 弹性体 \\
+Linear polymer & 线形聚合物 \\
+Branched polymer & 支化聚合物 \\
+Block copolymer & 嵌段共聚物 \\
+Graft copolymer & 接枝共聚物 \\
+Random copolymer & 无规共聚物 \\
+Alternating copolymer & 交替共聚物 \\
+Amorphous & 无定形的 \\
+Crystalline & 结晶的 \\
+Semicrystalline & 半结晶的 \\
+Glass transition temperature ($T_g$) & 玻璃化转变温度 \\
+Melting temperature ($T_m$) & 熔融温度 \\
+Polyethylene (PE) & 聚乙烯 \\
+Low-density PE (LDPE) & 低密度聚乙烯 \\
+High-density PE (HDPE) & 高密度聚乙烯 \\
+Ultra-high molecular weight PE (UHMWPE) & 超高分子量聚乙烯 \\
+Polypropylene (PP) & 聚丙烯 \\
+Polystyrene (PS) & 聚苯乙烯 \\
+Polyvinyl chloride (PVC) & 聚氯乙烯 \\
+Polyethylene terephthalate (PET) & 聚对苯二甲酸乙二醇酯 \\
+Polyamide (PA) / Nylon & 聚酰胺 / 尼龙 \\
+Nylon 6,6 & 尼龙66 \\
+Polycarbonate (PC) & 聚碳酸酯 \\
+Acrylonitrile butadiene styrene (ABS) & 丙烯腈-丁二烯-苯乙烯共聚物 \\
+Polyurethane (PU) & 聚氨酯 \\
+Polyether ether ketone (PEEK) & 聚醚醚酮 \\
+Polytetrafluoroethylene (PTFE) & 聚四氟乙烯 \\
+Polydimethylsiloxane (PDMS) & 聚二甲基硅氧烷 \\
+Kevlar & 凯夫拉（芳纶） \\
+Polyimide (PI) & 聚酰亚胺 \\
+Polyvinylidene fluoride (PVDF) & 聚偏氟乙烯 \\
+Resin identification code & 树脂识别码 \\
+Bioplastic & 生物塑料 \\
+Cellulose & 纤维素 \\
+Ziegler-Natta catalyst & 齐格勒-纳塔催化剂 \\
+Metallocene catalyst & 茂金属催化剂 \\
+Free radical polymerization & 自由基聚合 \\
+Emulsion polymerization & 乳液聚合 \\
+Interfacial polymerization & 界面聚合 \\
+\bottomrule
+\end{longtable}
+
+\newpage
+\section*{重点提示}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{区分热塑性与热固性}: 本质是线形/支化（可逆） vs 交联网络（不可逆）。
+    \item \textbf{写出聚合物的重复单元结构}: 例如 PET 的重复单元为 $-\mathrm{CO}-\mathrm{C_6H_4}-\mathrm{COO}-\mathrm{CH_2CH_2O}-$。
+    \item \textbf{解释结构与性能关系}: 芳环 → 刚性/高 $T_m$；氢键（尼龙）→ 强度；交联 → 弹性或热固性。
+    \item \textbf{树脂代码 1-7}: 1(PET), 2(HDPE), 3(PVC), 4(LDPE), 5(PP), 6(PS), 7(其他)。
+    \item \textbf{热转变数据}:  PET ($T_g\sim70^\circ$C) 不适合热灌装；PC 的 $T_g$ 高，可用作耐热透明材料；PP 的 $T_m$ 高于 PE。
+    \item \textbf{尼龙合成}: 尼龙66为缩聚，尼龙6为开环聚合。
+    \item \textbf{ABS三组分功能}: 丙烯腈 (耐化学品/热稳定性)、丁二烯 (韧性)、苯乙烯 (刚性/加工性)。
+\end{enumerate}
+
+\end{document}
